@@ -1,0 +1,1 @@
+Server = 192.168.13.70; Database = procurement_tracking; Uid=dev; Pwd=dev123; Port=3306

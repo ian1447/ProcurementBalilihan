@@ -1,0 +1,1 @@
+Server = localhost; Database = procurement_tracking; Uid = root; Pwd = password; Port = 3307;
