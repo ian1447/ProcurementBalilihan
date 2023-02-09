@@ -18,3 +18,23 @@ C:\Users\Mor\Documents\Visual Studio 2010\Projects\Procurement Tracking App\Proc
 C:\Users\Mor\Documents\Visual Studio 2010\Projects\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.exe
 C:\Users\Mor\Documents\Visual Studio 2010\Projects\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.pdb
 C:\Users\Mor\Documents\Visual Studio 2010\Projects\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.Breakdown.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\bin\Debug\Procurement Tracking App.exe
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\bin\Debug\Procurement Tracking App.pdb
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.csprojResolveAssemblyReference.cache
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.Breakdown.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.ChangeConnectionForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.LoginForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.MainForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.MainFormRedesigned.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.PrintForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.ProcurementTrackingForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.Properties.Resources.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.PurchaseForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.ReportForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.SupplierForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.UserManagementForm.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.WaitForm1.resources
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.csproj.GenerateResource.Cache
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.exe.licenses
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.exe
+C:\Users\Mor\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.pdb
