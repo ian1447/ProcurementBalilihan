@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Breakdown));
             this.gcBreakdown = new DevExpress.XtraEditors.GroupControl();
+            this.cbSupplier = new System.Windows.Forms.ComboBox();
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btndelete = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.medescription = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtunitcost = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtquan = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtunit = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtpropertyno = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnsave = new DevExpress.XtraEditors.SimpleButton();
             this.lblPrNo = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.gvbreakdown = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dtbreakdown = new DevExpress.XtraGrid.GridControl();
+            this.gvbreakdown = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.property_no = new DevExpress.XtraGrid.Columns.GridColumn();
             this.unit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.description = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,41 +58,50 @@
             this.supplier = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcBreakdown)).BeginInit();
             this.gcBreakdown.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtunitcost.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtquan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtunit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpropertyno.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtbreakdown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvbreakdown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gcBreakdown
             // 
+            this.gcBreakdown.Controls.Add(this.cbSupplier);
             this.gcBreakdown.Controls.Add(this.btnadd);
             this.gcBreakdown.Controls.Add(this.btndelete);
             this.gcBreakdown.Controls.Add(this.labelControl6);
-            this.gcBreakdown.Controls.Add(this.comboBoxEdit1);
-            this.gcBreakdown.Controls.Add(this.memoEdit1);
+            this.gcBreakdown.Controls.Add(this.medescription);
             this.gcBreakdown.Controls.Add(this.labelControl5);
-            this.gcBreakdown.Controls.Add(this.textEdit3);
+            this.gcBreakdown.Controls.Add(this.txtunitcost);
             this.gcBreakdown.Controls.Add(this.labelControl3);
-            this.gcBreakdown.Controls.Add(this.textEdit4);
+            this.gcBreakdown.Controls.Add(this.txtquan);
             this.gcBreakdown.Controls.Add(this.labelControl4);
-            this.gcBreakdown.Controls.Add(this.textEdit2);
+            this.gcBreakdown.Controls.Add(this.txtunit);
             this.gcBreakdown.Controls.Add(this.labelControl2);
-            this.gcBreakdown.Controls.Add(this.textEdit1);
+            this.gcBreakdown.Controls.Add(this.txtpropertyno);
             this.gcBreakdown.Controls.Add(this.labelControl1);
             this.gcBreakdown.Controls.Add(this.btnsave);
             this.gcBreakdown.Controls.Add(this.lblPrNo);
             this.gcBreakdown.Controls.Add(this.labelControl7);
-            this.gcBreakdown.Controls.Add(this.gvbreakdown);
+            this.gcBreakdown.Controls.Add(this.dtbreakdown);
             this.gcBreakdown.Location = new System.Drawing.Point(12, 12);
             this.gcBreakdown.Name = "gcBreakdown";
             this.gcBreakdown.Size = new System.Drawing.Size(900, 546);
             this.gcBreakdown.TabIndex = 21;
             this.gcBreakdown.Text = "Breakdown";
+            // 
+            // cbSupplier
+            // 
+            this.cbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSupplier.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSupplier.FormattingEnabled = true;
+            this.cbSupplier.Location = new System.Drawing.Point(704, 397);
+            this.cbSupplier.Name = "cbSupplier";
+            this.cbSupplier.Size = new System.Drawing.Size(178, 24);
+            this.cbSupplier.TabIndex = 39;
             // 
             // btnadd
             // 
@@ -101,7 +110,8 @@
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(239, 47);
             this.btnadd.TabIndex = 38;
-            this.btnadd.Text = "Save and Exit";
+            this.btnadd.Text = "Add";
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btndelete
             // 
@@ -110,7 +120,7 @@
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(239, 49);
             this.btndelete.TabIndex = 37;
-            this.btndelete.Text = "Save and Exit";
+            this.btndelete.Text = "Delete";
             // 
             // labelControl6
             // 
@@ -121,24 +131,13 @@
             this.labelControl6.TabIndex = 36;
             this.labelControl6.Text = "Supplier:";
             // 
-            // comboBoxEdit1
+            // medescription
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(703, 397);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(179, 22);
-            this.comboBoxEdit1.TabIndex = 35;
-            // 
-            // memoEdit1
-            // 
-            this.memoEdit1.Location = new System.Drawing.Point(137, 461);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.memoEdit1.Size = new System.Drawing.Size(489, 80);
-            this.memoEdit1.TabIndex = 34;
+            this.medescription.Location = new System.Drawing.Point(137, 461);
+            this.medescription.Name = "medescription";
+            this.medescription.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.medescription.Size = new System.Drawing.Size(489, 80);
+            this.medescription.TabIndex = 34;
             // 
             // labelControl5
             // 
@@ -149,14 +148,14 @@
             this.labelControl5.TabIndex = 33;
             this.labelControl5.Text = "Item Description:";
             // 
-            // textEdit3
+            // txtunitcost
             // 
-            this.textEdit3.Location = new System.Drawing.Point(421, 433);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(205, 22);
-            this.textEdit3.TabIndex = 32;
+            this.txtunitcost.Location = new System.Drawing.Point(421, 433);
+            this.txtunitcost.Name = "txtunitcost";
+            this.txtunitcost.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtunitcost.Properties.Appearance.Options.UseFont = true;
+            this.txtunitcost.Size = new System.Drawing.Size(205, 22);
+            this.txtunitcost.TabIndex = 32;
             // 
             // labelControl3
             // 
@@ -167,14 +166,14 @@
             this.labelControl3.TabIndex = 31;
             this.labelControl3.Text = "Unit Cost:";
             // 
-            // textEdit4
+            // txtquan
             // 
-            this.textEdit4.Location = new System.Drawing.Point(421, 396);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(205, 22);
-            this.textEdit4.TabIndex = 30;
+            this.txtquan.Location = new System.Drawing.Point(421, 396);
+            this.txtquan.Name = "txtquan";
+            this.txtquan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquan.Properties.Appearance.Options.UseFont = true;
+            this.txtquan.Size = new System.Drawing.Size(205, 22);
+            this.txtquan.TabIndex = 30;
             // 
             // labelControl4
             // 
@@ -185,14 +184,14 @@
             this.labelControl4.TabIndex = 29;
             this.labelControl4.Text = "Quantity:";
             // 
-            // textEdit2
+            // txtunit
             // 
-            this.textEdit2.Location = new System.Drawing.Point(137, 433);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(196, 22);
-            this.textEdit2.TabIndex = 28;
+            this.txtunit.Location = new System.Drawing.Point(137, 433);
+            this.txtunit.Name = "txtunit";
+            this.txtunit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtunit.Properties.Appearance.Options.UseFont = true;
+            this.txtunit.Size = new System.Drawing.Size(196, 22);
+            this.txtunit.TabIndex = 28;
             // 
             // labelControl2
             // 
@@ -203,14 +202,14 @@
             this.labelControl2.TabIndex = 27;
             this.labelControl2.Text = "Unit:";
             // 
-            // textEdit1
+            // txtpropertyno
             // 
-            this.textEdit1.Location = new System.Drawing.Point(137, 396);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(196, 22);
-            this.textEdit1.TabIndex = 26;
+            this.txtpropertyno.Location = new System.Drawing.Point(137, 396);
+            this.txtpropertyno.Name = "txtpropertyno";
+            this.txtpropertyno.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpropertyno.Properties.Appearance.Options.UseFont = true;
+            this.txtpropertyno.Size = new System.Drawing.Size(196, 22);
+            this.txtpropertyno.TabIndex = 26;
             // 
             // labelControl1
             // 
@@ -261,22 +260,22 @@
             this.labelControl7.TabIndex = 22;
             this.labelControl7.Text = "Pr No.";
             // 
-            // gvbreakdown
+            // dtbreakdown
             // 
-            this.gvbreakdown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.dtbreakdown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.gvbreakdown.Location = new System.Drawing.Point(19, 97);
-            this.gvbreakdown.MainView = this.gridView1;
-            this.gvbreakdown.Name = "gvbreakdown";
-            this.gvbreakdown.Size = new System.Drawing.Size(863, 293);
-            this.gvbreakdown.TabIndex = 21;
-            this.gvbreakdown.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dtbreakdown.Location = new System.Drawing.Point(19, 97);
+            this.dtbreakdown.MainView = this.gvbreakdown;
+            this.dtbreakdown.Name = "dtbreakdown";
+            this.dtbreakdown.Size = new System.Drawing.Size(863, 293);
+            this.dtbreakdown.TabIndex = 21;
+            this.dtbreakdown.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvbreakdown});
             // 
-            // gridView1
+            // gvbreakdown
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvbreakdown.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.property_no,
             this.unit,
             this.description,
@@ -284,15 +283,15 @@
             this.quantity,
             this.total_cost,
             this.supplier});
-            this.gridView1.GridControl = this.gvbreakdown;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsFind.AlwaysVisible = true;
-            this.gridView1.OptionsFind.SearchInPreview = true;
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedRow = false;
-            this.gridView1.OptionsView.RowAutoHeight = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowIndicator = false;
+            this.gvbreakdown.GridControl = this.dtbreakdown;
+            this.gvbreakdown.Name = "gvbreakdown";
+            this.gvbreakdown.OptionsBehavior.Editable = false;
+            this.gvbreakdown.OptionsFind.AlwaysVisible = true;
+            this.gvbreakdown.OptionsFind.SearchInPreview = true;
+            this.gvbreakdown.OptionsSelection.EnableAppearanceFocusedRow = false;
+            this.gvbreakdown.OptionsView.RowAutoHeight = true;
+            this.gvbreakdown.OptionsView.ShowGroupPanel = false;
+            this.gvbreakdown.OptionsView.ShowIndicator = false;
             // 
             // property_no
             // 
@@ -374,17 +373,17 @@
             this.Name = "Breakdown";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Breakdown";
+            this.Shown += new System.EventHandler(this.Breakdown_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.gcBreakdown)).EndInit();
             this.gcBreakdown.ResumeLayout(false);
             this.gcBreakdown.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtunitcost.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtquan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtunit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpropertyno.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtbreakdown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvbreakdown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,23 +392,20 @@
 
         private DevExpress.XtraEditors.GroupControl gcBreakdown;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraGrid.GridControl gvbreakdown;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvbreakdown;
+        private DevExpress.XtraEditors.MemoEdit medescription;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtunitcost;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txtquan;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtunit;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtpropertyno;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnsave;
         private DevExpress.XtraEditors.SimpleButton btnadd;
         private DevExpress.XtraEditors.SimpleButton btndelete;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
         public DevExpress.XtraEditors.LabelControl lblPrNo;
         private DevExpress.XtraGrid.Columns.GridColumn property_no;
         private DevExpress.XtraGrid.Columns.GridColumn unit;
@@ -418,5 +414,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn quantity;
         private DevExpress.XtraGrid.Columns.GridColumn total_cost;
         private DevExpress.XtraGrid.Columns.GridColumn supplier;
+        private System.Windows.Forms.ComboBox cbSupplier;
+        private DevExpress.XtraEditors.SimpleButton btnsave;
+        private DevExpress.XtraGrid.GridControl dtbreakdown;
     }
 }

@@ -38,6 +38,29 @@ namespace Procurement_Tracking_App.Dal
             }
         }
 
+        public static bool GetPurchaseBreakdownIsGood = false;
+        public static string GetPurchaseBreakdownErrorMessage;
+        public static DataTable GetPurchaseBreakdown(string _po_no)
+        {
+            DataSet dt = new DataSet();
+            using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+            {
+                try
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purchase_breakdown_get", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new MySqlParameter("_po_no", _po_no));
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    GetPurchaseBreakdownIsGood = true;
+                    return dt.Tables[0];
+                }
+                catch (Exception ex) { GetPurchaseBreakdownIsGood = false; GetPurchaseBreakdownErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Get"; return null; }
+            }
+        }
+
         public static bool GetPrIsGood = false;
         public static string GetPrErrorMessage;
         public static bool GetPr(string po_no)
@@ -89,5 +112,31 @@ namespace Procurement_Tracking_App.Dal
             catch (Exception ex) { AddPrIsGood = false; AddPrErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Add"; }
         }
 
+        public static bool AddBreakdownIsGood = false;
+        public static string AddBreakdownErrorMessage;
+        public static void AddBreakdown(string _po_no,string _property_no, string _unit, string _description, string _unit_cost, string _quantity, string _total_cost, string _supplier)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purchase_breakdown_add", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new MySqlParameter("_po_no", _po_no));
+                    cmd.Parameters.Add(new MySqlParameter("_property_no", _property_no));
+                    cmd.Parameters.Add(new MySqlParameter("_unit", _unit));
+                    cmd.Parameters.Add(new MySqlParameter("_description", _description));
+                    cmd.Parameters.Add(new MySqlParameter("_unit_cost", _unit_cost));
+                    cmd.Parameters.Add(new MySqlParameter("_quantity", _quantity));
+                    cmd.Parameters.Add(new MySqlParameter("_total_cost", _total_cost));
+                    cmd.Parameters.Add(new MySqlParameter("_supplier", _supplier));
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    AddBreakdownIsGood = true;
+                }
+            }
+            catch (Exception ex) { AddBreakdownIsGood = false; AddBreakdownErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Add"; }
+        }
     }
 }
