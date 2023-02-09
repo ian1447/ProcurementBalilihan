@@ -44,16 +44,32 @@ namespace Procurement_Tracking_App
                 Purchase.AddBreakdown(lblPrNo.Text,txtpropertyno.Text,txtunit.Text,medescription.Text,txtunitcost.Text,txtquan.Text,total.ToString(),cbSupplier.Text);
                 if (Purchase.AddBreakdownIsGood)
                 {
-                    breakdowntable = Purchase.GetPurchaseBreakdown(lblPrNo.Text);
-                    if (Purchase.GetPurchaseBreakdownIsGood)
-                    {
-                        MessageBox.Show("Added Succesfully!");
-                        dtbreakdown.DataSource = breakdowntable;
-                    }
-                    else
-                        MessageBox.Show(Purchase.GetPurchaseBreakdownErrorMessage);
+                    LoadData();
+                    ResetLabels();
                 }
             }
+        }
+
+        private void ResetLabels()
+        {
+            txtpropertyno.Text = "";
+            txtquan.Text = "";
+            txtunit.Text = "";
+            txtunitcost.Text = "";
+            medescription.Text = "";
+            cbSupplier.SelectedIndex = 1;
+        }
+
+        private void LoadData()
+        {
+            breakdowntable = Purchase.GetPurchaseBreakdown(lblPrNo.Text);
+            if (Purchase.GetPurchaseBreakdownIsGood)
+            {
+                MessageBox.Show("Added Succesfully!");
+                dtbreakdown.DataSource = breakdowntable;
+            }
+            else
+                MessageBox.Show(Purchase.GetPurchaseBreakdownErrorMessage);
         }
 
 
