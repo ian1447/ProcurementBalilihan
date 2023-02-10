@@ -32,3 +32,6 @@ Procurement Tracking App/Procurement Tracking App.suo
 *.suo
 *.exe
 *.pdb
+*.exe
+*.pdb
+*.Cache

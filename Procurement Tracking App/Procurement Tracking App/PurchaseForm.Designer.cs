@@ -34,6 +34,7 @@
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.po_no = new DevExpress.XtraGrid.Columns.GridColumn();
             this.description = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.end_user = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mode_of_pr = new DevExpress.XtraGrid.Columns.GridColumn();
             this.abc = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,11 +61,16 @@
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btncancel = new DevExpress.XtraEditors.SimpleButton();
+            this.repositoryItemMarqueeProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
+            this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dtPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPurchase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtabc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtPurchase
@@ -75,6 +81,10 @@
             this.dtPurchase.Location = new System.Drawing.Point(-1, 12);
             this.dtPurchase.MainView = this.gvPurchase;
             this.dtPurchase.Name = "dtPurchase";
+            this.dtPurchase.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemMemoEdit1,
+            this.repositoryItemMarqueeProgressBar1,
+            this.repositoryItemMemoEdit2});
             this.dtPurchase.Size = new System.Drawing.Size(970, 599);
             this.dtPurchase.TabIndex = 1;
             this.dtPurchase.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -83,6 +93,12 @@
             // 
             // gvPurchase
             // 
+            this.gvPurchase.Appearance.Preview.Options.UseTextOptions = true;
+            this.gvPurchase.Appearance.Preview.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gvPurchase.Appearance.Row.Options.UseTextOptions = true;
+            this.gvPurchase.Appearance.Row.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gvPurchase.Appearance.ViewCaption.Options.UseTextOptions = true;
+            this.gvPurchase.Appearance.ViewCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.gvPurchase.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.id,
             this.po_no,
@@ -133,14 +149,21 @@
             this.description.AppearanceCell.Options.UseTextOptions = true;
             this.description.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.description.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.description.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.description.AppearanceHeader.Options.UseTextOptions = true;
             this.description.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.description.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.description.Caption = "Description";
+            this.description.ColumnEdit = this.repositoryItemMemoEdit1;
             this.description.FieldName = "description";
+            this.description.MinWidth = 75;
             this.description.Name = "description";
             this.description.Visible = true;
             this.description.VisibleIndex = 1;
+            // 
+            // repositoryItemMemoEdit1
+            // 
+            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
             // end_user
             // 
@@ -152,6 +175,7 @@
             this.end_user.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.end_user.Caption = "End User";
             this.end_user.FieldName = "end_user";
+            this.end_user.MinWidth = 75;
             this.end_user.Name = "end_user";
             this.end_user.Visible = true;
             this.end_user.VisibleIndex = 2;
@@ -165,7 +189,9 @@
             this.mode_of_pr.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.mode_of_pr.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.mode_of_pr.Caption = "Mode of PR";
+            this.mode_of_pr.ColumnEdit = this.repositoryItemMemoEdit2;
             this.mode_of_pr.FieldName = "mode_of_pr";
+            this.mode_of_pr.MinWidth = 75;
             this.mode_of_pr.Name = "mode_of_pr";
             this.mode_of_pr.Visible = true;
             this.mode_of_pr.VisibleIndex = 3;
@@ -470,6 +496,7 @@
             this.btnedit.Size = new System.Drawing.Size(126, 42);
             this.btnedit.TabIndex = 18;
             this.btnedit.Text = "Edit";
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btncancel
             // 
@@ -482,6 +509,14 @@
             this.btncancel.TabIndex = 17;
             this.btncancel.Text = "Cancel";
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
+            // 
+            // repositoryItemMarqueeProgressBar1
+            // 
+            this.repositoryItemMarqueeProgressBar1.Name = "repositoryItemMarqueeProgressBar1";
+            // 
+            // repositoryItemMemoEdit2
+            // 
+            this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
             // 
             // PurchaseForm
             // 
@@ -508,9 +543,12 @@
             this.Shown += new System.EventHandler(this.PurchaseForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dtPurchase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPurchase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtabc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,5 +587,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn po;
         private DevExpress.XtraGrid.Columns.GridColumn ntp;
         private DevExpress.XtraGrid.Columns.GridColumn delivery;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar repositoryItemMarqueeProgressBar1;
     }
 }

@@ -139,6 +139,31 @@ namespace Procurement_Tracking_App.Dal
             catch (Exception ex) { AddBreakdownIsGood = false; AddBreakdownErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Add"; }
         }
 
+        //update
+        public static bool EditPurchaseIsGood = false;
+        public static string EditPurchaseErrorMessage;
+        public static void EditPurchase(string _po_no, string _description, string _end_user, string _mode_of_pr, string _abc)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purchase_edit", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new MySqlParameter("_po_no", _po_no));
+                    cmd.Parameters.Add(new MySqlParameter("_description", _description));
+                    cmd.Parameters.Add(new MySqlParameter("_end_user", _end_user));
+                    cmd.Parameters.Add(new MySqlParameter("_mode_of_pr", _mode_of_pr));
+                    cmd.Parameters.Add(new MySqlParameter("_abc", _abc));
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    EditPurchaseIsGood = true;
+                }
+            }
+            catch (Exception ex) { EditPurchaseIsGood = false; EditPurchaseErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Edit"; }
+        }
+
         //delete
         public static bool DeleteBreakdownIsGood = false;
         public static string DeleteBreakdownErrorMessage;

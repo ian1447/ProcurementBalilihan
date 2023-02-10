@@ -113,5 +113,18 @@ namespace Procurement_Tracking_App
             btncancel.Enabled = false;
             btnedit.Enabled = false;
         }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            Purchase.EditPurchase(txtPrNo.Text, txtDescription.Text, cbEndUser.Text, cbmode.Text, txtabc.Text);
+            if (Purchase.EditPurchaseIsGood)
+            {
+                MessageBox.Show("Purchase Details Edited!");
+                btncancel.PerformClick();
+                LoadData();
+            }
+            else
+                MessageBox.Show(Purchase.EditPurchaseErrorMessage);
+        }
     }
 }
