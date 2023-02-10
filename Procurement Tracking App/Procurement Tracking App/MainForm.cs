@@ -89,26 +89,26 @@ namespace Procurement_Tracking_App
         public static bool IsPrintForm = false;
         private void btnprint_ItemClick(object sender, ItemClickEventArgs e)
         {
-        if (!IsPrintForm)
-            {
-                IsPrintForm = true;
-                PrintForm prf = new PrintForm();
-                prf.MdiParent = this;
-                prf.WindowState = FormWindowState.Maximized;
-                prf.Show();
-            }
-            else
-            {
-                Form fc = Application.OpenForms["PrintForm"];
-                if (fc == null)
-                {
-                    PrintForm a1 = new PrintForm();
-                    a1.MdiParent = this;
-                    a1.Show();
-                }
-                else
-                    fc.Activate();
-            }
+        //if (!IsPrintForm)
+        //    {
+        //        IsPrintForm = true;
+        //        PrintForm prf = new PrintForm();
+        //        prf.MdiParent = this;
+        //        prf.WindowState = FormWindowState.Maximized;
+        //        prf.Show();
+        //    }
+        //    else
+        //    {
+        //        Form fc = Application.OpenForms["PrintForm"];
+        //        if (fc == null)
+        //        {
+        //            PrintForm a1 = new PrintForm();
+        //            a1.MdiParent = this;
+        //            a1.Show();
+        //        }
+        //        else
+        //            fc.Activate();
+        //    }
         }
 
         public static bool IsUserManagementForm = false;

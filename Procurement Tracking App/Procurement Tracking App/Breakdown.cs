@@ -19,10 +19,13 @@ namespace Procurement_Tracking_App
             InitializeComponent();
         }
 
+        public bool view = false;
         DataTable suppliertable = new DataTable();
         DataTable breakdowntable = new DataTable();
         private void Breakdown_Shown(object sender, EventArgs e)
         {
+            if (view)
+                ForViewing();
             suppliertable = Supplier.GetSuppliers();
             if (Supplier.GetSuppliersIsGood)
             {
@@ -32,6 +35,19 @@ namespace Procurement_Tracking_App
             }
             else
                 MessageBox.Show(Supplier.GetSuppliersErrorMessage);
+            LoadData();
+        }
+
+        private void ForViewing()
+        {
+            btnadd.Enabled = false;
+            btndelete.Enabled = false;
+            txtpropertyno.Enabled = false;
+            txtquan.Enabled = false;
+            txtunit.Enabled = false;
+            txtunitcost.Enabled = false;
+            medescription.Enabled = false;
+            cbSupplier.Enabled = false;
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -66,7 +82,6 @@ namespace Procurement_Tracking_App
             breakdowntable = Purchase.GetPurchaseBreakdown(lblPrNo.Text);
             if (Purchase.GetPurchaseBreakdownIsGood)
             {
-                MessageBox.Show("Added Succesfully!");
                 dtbreakdown.DataSource = breakdowntable;
             }
             else
@@ -103,6 +118,11 @@ namespace Procurement_Tracking_App
                     return false;
             }
             catch { return false; }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

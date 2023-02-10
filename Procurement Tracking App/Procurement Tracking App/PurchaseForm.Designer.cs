@@ -72,7 +72,10 @@
             this.btnEditPurchase = new DevExpress.XtraBars.BarButtonItem();
             this.btnEditBreakdown = new DevExpress.XtraBars.BarButtonItem();
             this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.btnViewBreakdown = new DevExpress.XtraBars.BarButtonItem();
             this.popupMenuGrid = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
+            this.bwLoadData = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dtPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -541,8 +544,9 @@
             this.barMenuGrid.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnEditPurchase,
             this.btnEditBreakdown,
-            this.btnRefresh});
-            this.barMenuGrid.MaxItemId = 3;
+            this.btnRefresh,
+            this.btnViewBreakdown});
+            this.barMenuGrid.MaxItemId = 4;
             // 
             // barDockControlTop
             // 
@@ -579,6 +583,7 @@
             this.btnEditPurchase.Id = 0;
             this.btnEditPurchase.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnEditPurchase.LargeGlyph")));
             this.btnEditPurchase.Name = "btnEditPurchase";
+            this.btnEditPurchase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditPurchase_ItemClick);
             // 
             // btnEditBreakdown
             // 
@@ -587,6 +592,7 @@
             this.btnEditBreakdown.Id = 1;
             this.btnEditBreakdown.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnEditBreakdown.LargeGlyph")));
             this.btnEditBreakdown.Name = "btnEditBreakdown";
+            this.btnEditBreakdown.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditBreakdown_ItemClick);
             // 
             // btnRefresh
             // 
@@ -597,14 +603,30 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefresh_ItemClick);
             // 
+            // btnViewBreakdown
+            // 
+            this.btnViewBreakdown.Caption = "View Breakdown";
+            this.btnViewBreakdown.Glyph = ((System.Drawing.Image)(resources.GetObject("btnViewBreakdown.Glyph")));
+            this.btnViewBreakdown.Id = 3;
+            this.btnViewBreakdown.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnViewBreakdown.LargeGlyph")));
+            this.btnViewBreakdown.Name = "btnViewBreakdown";
+            this.btnViewBreakdown.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewBreakdown_ItemClick);
+            // 
             // popupMenuGrid
             // 
             this.popupMenuGrid.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEditPurchase, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEditBreakdown, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnViewBreakdown, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnRefresh, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.popupMenuGrid.Manager = this.barMenuGrid;
             this.popupMenuGrid.Name = "popupMenuGrid";
+            // 
+            // bwLoadData
+            // 
+            this.bwLoadData.WorkerSupportsCancellation = true;
+            this.bwLoadData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadData_DoWork);
+            this.bwLoadData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadData_RunWorkerCompleted);
             // 
             // PurchaseForm
             // 
@@ -693,5 +715,8 @@
         private DevExpress.XtraBars.BarButtonItem btnEditBreakdown;
         private DevExpress.XtraBars.BarButtonItem btnRefresh;
         private DevExpress.XtraBars.PopupMenu popupMenuGrid;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private System.ComponentModel.BackgroundWorker bwLoadData;
+        private DevExpress.XtraBars.BarButtonItem btnViewBreakdown;
     }
 }

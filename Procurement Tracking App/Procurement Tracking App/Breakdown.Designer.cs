@@ -56,6 +56,7 @@
             this.total_cost = new DevExpress.XtraGrid.Columns.GridColumn();
             this.supplier = new DevExpress.XtraGrid.Columns.GridColumn();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gcBreakdown)).BeginInit();
             this.gcBreakdown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medescription.Properties)).BeginInit();
@@ -69,6 +70,7 @@
             // 
             // gcBreakdown
             // 
+            this.gcBreakdown.Controls.Add(this.btnClose);
             this.gcBreakdown.Controls.Add(this.cbSupplier);
             this.gcBreakdown.Controls.Add(this.btnadd);
             this.gcBreakdown.Controls.Add(this.btndelete);
@@ -236,7 +238,7 @@
             this.lblPrNo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lblPrNo.Location = new System.Drawing.Point(19, 47);
             this.lblPrNo.Name = "lblPrNo";
-            this.lblPrNo.Size = new System.Drawing.Size(863, 44);
+            this.lblPrNo.Size = new System.Drawing.Size(747, 44);
             this.lblPrNo.TabIndex = 23;
             // 
             // labelControl7
@@ -251,7 +253,7 @@
             this.labelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.labelControl7.Location = new System.Drawing.Point(19, 30);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(863, 20);
+            this.labelControl7.Size = new System.Drawing.Size(747, 20);
             this.labelControl7.TabIndex = 22;
             this.labelControl7.Text = "Pr No.";
             // 
@@ -406,6 +408,16 @@
             this.id.FieldName = "id";
             this.id.Name = "id";
             // 
+            // btnClose
+            // 
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(772, 30);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(110, 61);
+            this.btnClose.TabIndex = 40;
+            this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Breakdown
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,5 +472,6 @@
         private System.Windows.Forms.ComboBox cbSupplier;
         private DevExpress.XtraGrid.GridControl dtbreakdown;
         private DevExpress.XtraGrid.Columns.GridColumn id;
+        private DevExpress.XtraEditors.SimpleButton btnClose;
     }
 }
