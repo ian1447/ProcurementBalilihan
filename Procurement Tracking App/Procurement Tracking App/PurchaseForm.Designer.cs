@@ -72,13 +72,14 @@
             this.dtPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtPurchase.Location = new System.Drawing.Point(12, 12);
+            this.dtPurchase.Location = new System.Drawing.Point(-1, 12);
             this.dtPurchase.MainView = this.gvPurchase;
             this.dtPurchase.Name = "dtPurchase";
             this.dtPurchase.Size = new System.Drawing.Size(970, 599);
             this.dtPurchase.TabIndex = 1;
             this.dtPurchase.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPurchase});
+            this.dtPurchase.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtPurchase_MouseDoubleClick);
             // 
             // gvPurchase
             // 
@@ -103,7 +104,6 @@
             this.gvPurchase.OptionsBehavior.Editable = false;
             this.gvPurchase.OptionsFind.AlwaysVisible = true;
             this.gvPurchase.OptionsFind.SearchInPreview = true;
-            this.gvPurchase.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gvPurchase.OptionsView.RowAutoHeight = true;
             this.gvPurchase.OptionsView.ShowGroupPanel = false;
             this.gvPurchase.OptionsView.ShowIndicator = false;
@@ -116,6 +116,12 @@
             // 
             // po_no
             // 
+            this.po_no.AppearanceCell.Options.UseTextOptions = true;
+            this.po_no.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.po_no.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.po_no.AppearanceHeader.Options.UseTextOptions = true;
+            this.po_no.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.po_no.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.po_no.Caption = "PO No.";
             this.po_no.FieldName = "po_no";
             this.po_no.Name = "po_no";
@@ -124,6 +130,12 @@
             // 
             // description
             // 
+            this.description.AppearanceCell.Options.UseTextOptions = true;
+            this.description.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.description.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.description.AppearanceHeader.Options.UseTextOptions = true;
+            this.description.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.description.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.description.Caption = "Description";
             this.description.FieldName = "description";
             this.description.Name = "description";
@@ -132,6 +144,12 @@
             // 
             // end_user
             // 
+            this.end_user.AppearanceCell.Options.UseTextOptions = true;
+            this.end_user.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.end_user.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.end_user.AppearanceHeader.Options.UseTextOptions = true;
+            this.end_user.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.end_user.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.end_user.Caption = "End User";
             this.end_user.FieldName = "end_user";
             this.end_user.Name = "end_user";
@@ -140,6 +158,12 @@
             // 
             // mode_of_pr
             // 
+            this.mode_of_pr.AppearanceCell.Options.UseTextOptions = true;
+            this.mode_of_pr.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.mode_of_pr.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.mode_of_pr.AppearanceHeader.Options.UseTextOptions = true;
+            this.mode_of_pr.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.mode_of_pr.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.mode_of_pr.Caption = "Mode of PR";
             this.mode_of_pr.FieldName = "mode_of_pr";
             this.mode_of_pr.Name = "mode_of_pr";
@@ -148,6 +172,12 @@
             // 
             // abc
             // 
+            this.abc.AppearanceCell.Options.UseTextOptions = true;
+            this.abc.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.abc.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.abc.AppearanceHeader.Options.UseTextOptions = true;
+            this.abc.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.abc.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.abc.Caption = "ABC";
             this.abc.FieldName = "abc";
             this.abc.Name = "abc";
@@ -156,6 +186,12 @@
             // 
             // posting
             // 
+            this.posting.AppearanceCell.Options.UseTextOptions = true;
+            this.posting.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.posting.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.posting.AppearanceHeader.Options.UseTextOptions = true;
+            this.posting.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.posting.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.posting.Caption = "Posting";
             this.posting.FieldName = "posting";
             this.posting.Name = "posting";
@@ -164,6 +200,12 @@
             // 
             // opening_of_bids
             // 
+            this.opening_of_bids.AppearanceCell.Options.UseTextOptions = true;
+            this.opening_of_bids.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.opening_of_bids.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.opening_of_bids.AppearanceHeader.Options.UseTextOptions = true;
+            this.opening_of_bids.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.opening_of_bids.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.opening_of_bids.Caption = "Opening of bids";
             this.opening_of_bids.FieldName = "opening_of_bids";
             this.opening_of_bids.Name = "opening_of_bids";
@@ -172,6 +214,12 @@
             // 
             // preproc
             // 
+            this.preproc.AppearanceCell.Options.UseTextOptions = true;
+            this.preproc.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.preproc.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.preproc.AppearanceHeader.Options.UseTextOptions = true;
+            this.preproc.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.preproc.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.preproc.Caption = "Pre Proc";
             this.preproc.FieldName = "preproc";
             this.preproc.Name = "preproc";
@@ -180,6 +228,12 @@
             // 
             // predib
             // 
+            this.predib.AppearanceCell.Options.UseTextOptions = true;
+            this.predib.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.predib.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.predib.AppearanceHeader.Options.UseTextOptions = true;
+            this.predib.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.predib.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.predib.Caption = "Pre Bid";
             this.predib.FieldName = "prebid";
             this.predib.Name = "predib";
@@ -188,6 +242,12 @@
             // 
             // detailed_bid_evaluation
             // 
+            this.detailed_bid_evaluation.AppearanceCell.Options.UseTextOptions = true;
+            this.detailed_bid_evaluation.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.detailed_bid_evaluation.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.detailed_bid_evaluation.AppearanceHeader.Options.UseTextOptions = true;
+            this.detailed_bid_evaluation.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.detailed_bid_evaluation.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.detailed_bid_evaluation.Caption = "Detailed Bid Evaluation";
             this.detailed_bid_evaluation.FieldName = "detailed_bid_evaluation";
             this.detailed_bid_evaluation.Name = "detailed_bid_evaluation";
@@ -196,6 +256,12 @@
             // 
             // award
             // 
+            this.award.AppearanceCell.Options.UseTextOptions = true;
+            this.award.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.award.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.award.AppearanceHeader.Options.UseTextOptions = true;
+            this.award.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.award.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.award.Caption = "Award";
             this.award.FieldName = "award";
             this.award.Name = "award";
@@ -204,6 +270,12 @@
             // 
             // po
             // 
+            this.po.AppearanceCell.Options.UseTextOptions = true;
+            this.po.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.po.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.po.AppearanceHeader.Options.UseTextOptions = true;
+            this.po.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.po.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.po.Caption = "PO";
             this.po.FieldName = "po";
             this.po.Name = "po";
@@ -212,6 +284,12 @@
             // 
             // ntp
             // 
+            this.ntp.AppearanceCell.Options.UseTextOptions = true;
+            this.ntp.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ntp.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.ntp.AppearanceHeader.Options.UseTextOptions = true;
+            this.ntp.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ntp.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.ntp.Caption = "NTP";
             this.ntp.FieldName = "ntp";
             this.ntp.Name = "ntp";
@@ -220,6 +298,12 @@
             // 
             // delivery
             // 
+            this.delivery.AppearanceCell.Options.UseTextOptions = true;
+            this.delivery.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.delivery.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.delivery.AppearanceHeader.Options.UseTextOptions = true;
+            this.delivery.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.delivery.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.delivery.Caption = "Delivery";
             this.delivery.FieldName = "delivery";
             this.delivery.Name = "delivery";
@@ -397,6 +481,7 @@
             this.btncancel.Size = new System.Drawing.Size(120, 42);
             this.btncancel.TabIndex = 17;
             this.btncancel.Text = "Cancel";
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // PurchaseForm
             // 

@@ -73,7 +73,36 @@ namespace Procurement_Tracking_App
                 MessageBox.Show(Purchase.GetPurchaseBreakdownErrorMessage);
         }
 
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                var focusRowView = (DataRowView)gvbreakdown.GetFocusedRow();
+                Purchase.DeleteBreakdown(Convert.ToInt32(focusRowView.Row["id"].ToString()));
+                if (Purchase.DeleteBreakdownIsGood)
+                {
+                    MessageBox.Show("Breakdown Deleted!");
+                    LoadData();
+                }
+                else
+                    MessageBox.Show(Purchase.DeleteBreakdownErrorMessage);
 
+            }
+        }
 
+        public bool SelectionPass()
+        {
+            try
+            {
+                if (gvbreakdown.SelectedRowsCount > 0)
+                {
+                    int selectedRowId = Convert.ToInt32(gvbreakdown.GetRowCellValue(gvbreakdown.FocusedRowHandle, "id"));
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch { return false; }
+        }
     }
 }

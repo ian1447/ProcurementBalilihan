@@ -44,7 +44,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtpropertyno = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnsave = new DevExpress.XtraEditors.SimpleButton();
             this.lblPrNo = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.dtbreakdown = new DevExpress.XtraGrid.GridControl();
@@ -56,6 +55,7 @@
             this.quantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.total_cost = new DevExpress.XtraGrid.Columns.GridColumn();
             this.supplier = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.id = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcBreakdown)).BeginInit();
             this.gcBreakdown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medescription.Properties)).BeginInit();
@@ -83,7 +83,6 @@
             this.gcBreakdown.Controls.Add(this.labelControl2);
             this.gcBreakdown.Controls.Add(this.txtpropertyno);
             this.gcBreakdown.Controls.Add(this.labelControl1);
-            this.gcBreakdown.Controls.Add(this.btnsave);
             this.gcBreakdown.Controls.Add(this.lblPrNo);
             this.gcBreakdown.Controls.Add(this.labelControl7);
             this.gcBreakdown.Controls.Add(this.dtbreakdown);
@@ -121,6 +120,7 @@
             this.btndelete.Size = new System.Drawing.Size(239, 49);
             this.btndelete.TabIndex = 37;
             this.btndelete.Text = "Delete";
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // labelControl6
             // 
@@ -154,6 +154,8 @@
             this.txtunitcost.Name = "txtunitcost";
             this.txtunitcost.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtunitcost.Properties.Appearance.Options.UseFont = true;
+            this.txtunitcost.Properties.Mask.EditMask = "n";
+            this.txtunitcost.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtunitcost.Size = new System.Drawing.Size(205, 22);
             this.txtunitcost.TabIndex = 32;
             // 
@@ -172,6 +174,8 @@
             this.txtquan.Name = "txtquan";
             this.txtquan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtquan.Properties.Appearance.Options.UseFont = true;
+            this.txtquan.Properties.Mask.EditMask = "d";
+            this.txtquan.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtquan.Size = new System.Drawing.Size(205, 22);
             this.txtquan.TabIndex = 30;
             // 
@@ -220,15 +224,6 @@
             this.labelControl1.TabIndex = 25;
             this.labelControl1.Text = "Property No.: ";
             // 
-            // btnsave
-            // 
-            this.btnsave.Image = ((System.Drawing.Image)(resources.GetObject("btnsave.Image")));
-            this.btnsave.Location = new System.Drawing.Point(720, 30);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(162, 61);
-            this.btnsave.TabIndex = 24;
-            this.btnsave.Text = "Save and Exit";
-            // 
             // lblPrNo
             // 
             this.lblPrNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
@@ -241,7 +236,7 @@
             this.lblPrNo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lblPrNo.Location = new System.Drawing.Point(19, 47);
             this.lblPrNo.Name = "lblPrNo";
-            this.lblPrNo.Size = new System.Drawing.Size(695, 44);
+            this.lblPrNo.Size = new System.Drawing.Size(863, 44);
             this.lblPrNo.TabIndex = 23;
             // 
             // labelControl7
@@ -256,7 +251,7 @@
             this.labelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.labelControl7.Location = new System.Drawing.Point(19, 30);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(695, 20);
+            this.labelControl7.Size = new System.Drawing.Size(863, 20);
             this.labelControl7.TabIndex = 22;
             this.labelControl7.Text = "Pr No.";
             // 
@@ -282,19 +277,25 @@
             this.unit_cost,
             this.quantity,
             this.total_cost,
-            this.supplier});
+            this.supplier,
+            this.id});
             this.gvbreakdown.GridControl = this.dtbreakdown;
             this.gvbreakdown.Name = "gvbreakdown";
             this.gvbreakdown.OptionsBehavior.Editable = false;
             this.gvbreakdown.OptionsFind.AlwaysVisible = true;
             this.gvbreakdown.OptionsFind.SearchInPreview = true;
-            this.gvbreakdown.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gvbreakdown.OptionsView.RowAutoHeight = true;
             this.gvbreakdown.OptionsView.ShowGroupPanel = false;
             this.gvbreakdown.OptionsView.ShowIndicator = false;
             // 
             // property_no
             // 
+            this.property_no.AppearanceCell.Options.UseTextOptions = true;
+            this.property_no.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.property_no.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.property_no.AppearanceHeader.Options.UseTextOptions = true;
+            this.property_no.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.property_no.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.property_no.Caption = "Property No.";
             this.property_no.FieldName = "property_no";
             this.property_no.MinWidth = 150;
@@ -305,6 +306,12 @@
             // 
             // unit
             // 
+            this.unit.AppearanceCell.Options.UseTextOptions = true;
+            this.unit.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.unit.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.unit.AppearanceHeader.Options.UseTextOptions = true;
+            this.unit.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.unit.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.unit.Caption = "Unit";
             this.unit.FieldName = "unit";
             this.unit.MinWidth = 75;
@@ -315,6 +322,12 @@
             // 
             // description
             // 
+            this.description.AppearanceCell.Options.UseTextOptions = true;
+            this.description.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.description.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.description.AppearanceHeader.Options.UseTextOptions = true;
+            this.description.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.description.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.description.Caption = "Description";
             this.description.FieldName = "description";
             this.description.MinWidth = 200;
@@ -325,6 +338,12 @@
             // 
             // unit_cost
             // 
+            this.unit_cost.AppearanceCell.Options.UseTextOptions = true;
+            this.unit_cost.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.unit_cost.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.unit_cost.AppearanceHeader.Options.UseTextOptions = true;
+            this.unit_cost.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.unit_cost.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.unit_cost.Caption = "Unit Cost";
             this.unit_cost.FieldName = "unit_cost";
             this.unit_cost.MinWidth = 75;
@@ -335,6 +354,12 @@
             // 
             // quantity
             // 
+            this.quantity.AppearanceCell.Options.UseTextOptions = true;
+            this.quantity.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.quantity.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.quantity.AppearanceHeader.Options.UseTextOptions = true;
+            this.quantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.quantity.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.quantity.Caption = "Quantity";
             this.quantity.FieldName = "quantity";
             this.quantity.MinWidth = 75;
@@ -345,6 +370,12 @@
             // 
             // total_cost
             // 
+            this.total_cost.AppearanceCell.Options.UseTextOptions = true;
+            this.total_cost.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.total_cost.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.total_cost.AppearanceHeader.Options.UseTextOptions = true;
+            this.total_cost.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.total_cost.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.total_cost.Caption = "Total Cost";
             this.total_cost.FieldName = "total_cost";
             this.total_cost.MinWidth = 75;
@@ -355,6 +386,12 @@
             // 
             // supplier
             // 
+            this.supplier.AppearanceCell.Options.UseTextOptions = true;
+            this.supplier.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.supplier.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.supplier.AppearanceHeader.Options.UseTextOptions = true;
+            this.supplier.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.supplier.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.supplier.Caption = "Supplier";
             this.supplier.FieldName = "supplier";
             this.supplier.MinWidth = 75;
@@ -362,6 +399,12 @@
             this.supplier.Visible = true;
             this.supplier.VisibleIndex = 6;
             this.supplier.Width = 119;
+            // 
+            // id
+            // 
+            this.id.Caption = "id";
+            this.id.FieldName = "id";
+            this.id.Name = "id";
             // 
             // Breakdown
             // 
@@ -415,7 +458,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn total_cost;
         private DevExpress.XtraGrid.Columns.GridColumn supplier;
         private System.Windows.Forms.ComboBox cbSupplier;
-        private DevExpress.XtraEditors.SimpleButton btnsave;
         private DevExpress.XtraGrid.GridControl dtbreakdown;
+        private DevExpress.XtraGrid.Columns.GridColumn id;
     }
 }

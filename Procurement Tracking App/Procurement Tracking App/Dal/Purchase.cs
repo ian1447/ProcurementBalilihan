@@ -138,5 +138,26 @@ namespace Procurement_Tracking_App.Dal
             }
             catch (Exception ex) { AddBreakdownIsGood = false; AddBreakdownErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Add"; }
         }
+
+        //delete
+        public static bool DeleteBreakdownIsGood = false;
+        public static string DeleteBreakdownErrorMessage;
+        public static void DeleteBreakdown(int _id)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purchase_breakdown_delete", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new MySqlParameter("_id", _id));
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    DeleteBreakdownIsGood = true;
+                }
+            }
+            catch (Exception ex) { DeleteBreakdownIsGood = false; DeleteBreakdownErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Add"; }
+        }
     }
 }

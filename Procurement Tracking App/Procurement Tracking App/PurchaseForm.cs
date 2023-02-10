@@ -65,5 +65,53 @@ namespace Procurement_Tracking_App
                     MessageBox.Show(Purchase.GetPrErrorMessage);
             }
         }
+
+        public bool SelectionPass()
+        {
+            try
+            {
+                if (gvPurchase.SelectedRowsCount > 0)
+                {
+                    int selectedRowId = Convert.ToInt32(gvPurchase.GetRowCellValue(gvPurchase.FocusedRowHandle, "id"));
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch { return false; }
+        }
+
+        private void dtPurchase_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (SelectionPass())
+            {
+                var focusRowView = (DataRowView)gvPurchase.GetFocusedRow();
+                txtPrNo.Text = focusRowView.Row[1].ToString();
+                txtDescription.Text = focusRowView.Row[2].ToString();
+                cbEndUser.Text = focusRowView.Row[3].ToString();
+                cbmode.Text = focusRowView.Row[4].ToString();
+                txtabc.Text = focusRowView.Row[5].ToString();
+                txtPrNo.Enabled = false;
+                btnadd.Enabled = false;
+                btncancel.Enabled = true;
+                btnedit.Enabled = true;
+            }
+            else
+                MessageBox.Show("No Row Selected.");
+        }
+
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+            txtPrNo.Text = "";
+            txtDescription.Text = "";
+            cbEndUser.SelectedIndex = 1;
+            cbEndUser.SelectedItem = 1;
+            cbmode.Text = "";
+            txtabc.Text = "";
+            txtPrNo.Enabled = true;
+            btnadd.Enabled = true;
+            btncancel.Enabled = false;
+            btnedit.Enabled = false;
+        }
     }
 }
