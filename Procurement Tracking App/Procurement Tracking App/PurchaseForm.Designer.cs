@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseForm));
             this.dtPurchase = new DevExpress.XtraGrid.GridControl();
             this.gvPurchase = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -37,6 +38,7 @@
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.end_user = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mode_of_pr = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.abc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.posting = new DevExpress.XtraGrid.Columns.GridColumn();
             this.opening_of_bids = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,6 +49,7 @@
             this.po = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ntp = new DevExpress.XtraGrid.Columns.GridColumn();
             this.delivery = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemMarqueeProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtPrNo = new DevExpress.XtraEditors.TextEdit();
@@ -61,16 +64,25 @@
             this.btnadd = new DevExpress.XtraEditors.SimpleButton();
             this.btnedit = new DevExpress.XtraEditors.SimpleButton();
             this.btncancel = new DevExpress.XtraEditors.SimpleButton();
-            this.repositoryItemMarqueeProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
-            this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.barMenuGrid = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnEditPurchase = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEditBreakdown = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenuGrid = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtabc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barMenuGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenuGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // dtPurchase
@@ -78,7 +90,7 @@
             this.dtPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtPurchase.Location = new System.Drawing.Point(-1, 12);
+            this.dtPurchase.Location = new System.Drawing.Point(12, 12);
             this.dtPurchase.MainView = this.gvPurchase;
             this.dtPurchase.Name = "dtPurchase";
             this.dtPurchase.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -90,6 +102,7 @@
             this.dtPurchase.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPurchase});
             this.dtPurchase.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtPurchase_MouseDoubleClick);
+            this.dtPurchase.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtPurchase_MouseDown);
             // 
             // gvPurchase
             // 
@@ -195,6 +208,10 @@
             this.mode_of_pr.Name = "mode_of_pr";
             this.mode_of_pr.Visible = true;
             this.mode_of_pr.VisibleIndex = 3;
+            // 
+            // repositoryItemMemoEdit2
+            // 
+            this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
             // 
             // abc
             // 
@@ -335,6 +352,10 @@
             this.delivery.Name = "delivery";
             this.delivery.Visible = true;
             this.delivery.VisibleIndex = 13;
+            // 
+            // repositoryItemMarqueeProgressBar1
+            // 
+            this.repositoryItemMarqueeProgressBar1.Name = "repositoryItemMarqueeProgressBar1";
             // 
             // labelControl1
             // 
@@ -510,13 +531,80 @@
             this.btncancel.Text = "Cancel";
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
-            // repositoryItemMarqueeProgressBar1
+            // barMenuGrid
             // 
-            this.repositoryItemMarqueeProgressBar1.Name = "repositoryItemMarqueeProgressBar1";
+            this.barMenuGrid.DockControls.Add(this.barDockControlTop);
+            this.barMenuGrid.DockControls.Add(this.barDockControlBottom);
+            this.barMenuGrid.DockControls.Add(this.barDockControlLeft);
+            this.barMenuGrid.DockControls.Add(this.barDockControlRight);
+            this.barMenuGrid.Form = this;
+            this.barMenuGrid.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnEditPurchase,
+            this.btnEditBreakdown,
+            this.btnRefresh});
+            this.barMenuGrid.MaxItemId = 3;
             // 
-            // repositoryItemMemoEdit2
+            // barDockControlTop
             // 
-            this.repositoryItemMemoEdit2.Name = "repositoryItemMemoEdit2";
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1382, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 623);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1382, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 623);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1382, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 623);
+            // 
+            // btnEditPurchase
+            // 
+            this.btnEditPurchase.Caption = "Edit Purchase";
+            this.btnEditPurchase.Glyph = ((System.Drawing.Image)(resources.GetObject("btnEditPurchase.Glyph")));
+            this.btnEditPurchase.Id = 0;
+            this.btnEditPurchase.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnEditPurchase.LargeGlyph")));
+            this.btnEditPurchase.Name = "btnEditPurchase";
+            // 
+            // btnEditBreakdown
+            // 
+            this.btnEditBreakdown.Caption = "Edit Breakdown";
+            this.btnEditBreakdown.Glyph = ((System.Drawing.Image)(resources.GetObject("btnEditBreakdown.Glyph")));
+            this.btnEditBreakdown.Id = 1;
+            this.btnEditBreakdown.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnEditBreakdown.LargeGlyph")));
+            this.btnEditBreakdown.Name = "btnEditBreakdown";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Caption = "Refresh";
+            this.btnRefresh.Glyph = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Glyph")));
+            this.btnRefresh.Id = 2;
+            this.btnRefresh.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnRefresh.LargeGlyph")));
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefresh_ItemClick);
+            // 
+            // popupMenuGrid
+            // 
+            this.popupMenuGrid.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEditPurchase, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEditBreakdown, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnRefresh, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.popupMenuGrid.Manager = this.barMenuGrid;
+            this.popupMenuGrid.Name = "popupMenuGrid";
             // 
             // PurchaseForm
             // 
@@ -538,17 +626,23 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.dtPurchase);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "PurchaseForm";
             this.Text = "PurchaseForm";
             this.Shown += new System.EventHandler(this.PurchaseForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dtPurchase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPurchase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtabc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barMenuGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenuGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,5 +684,14 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar repositoryItemMarqueeProgressBar1;
+        private DevExpress.XtraBars.BarManager barMenuGrid;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem btnEditPurchase;
+        private DevExpress.XtraBars.BarButtonItem btnEditBreakdown;
+        private DevExpress.XtraBars.BarButtonItem btnRefresh;
+        private DevExpress.XtraBars.PopupMenu popupMenuGrid;
     }
 }

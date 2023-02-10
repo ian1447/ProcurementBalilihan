@@ -126,5 +126,24 @@ namespace Procurement_Tracking_App
             else
                 MessageBox.Show(Purchase.EditPurchaseErrorMessage);
         }
+
+        private void btnRefresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadData();
+        }
+
+        private void dtPurchase_MouseDown(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                if (e.Button == MouseButtons.Right)
+                {
+                    var rowH = gvPurchase.FocusedRowHandle;
+                    var focusRowView = (DataRowView)gvPurchase.GetFocusedRow();
+                    popupMenuGrid.ShowPopup(barMenuGrid, new Point(MousePosition.X, MousePosition.Y));
+                }
+            }
+            catch { }
+        }
     }
 }
