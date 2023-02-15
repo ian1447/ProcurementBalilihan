@@ -164,6 +164,27 @@ namespace Procurement_Tracking_App.Dal
             catch (Exception ex) { EditPurchaseIsGood = false; EditPurchaseErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Edit"; }
         }
 
+        public static bool UpdatePurchaseIsGood = false;
+        public static string UpdatePurchaseErrorMessage;
+        public static void UpdatePurchase(string _po_no, string _date)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purchase_update", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new MySqlParameter("_date", _date));
+                    cmd.Parameters.Add(new MySqlParameter("_po_no", _po_no));
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    UpdatePurchaseIsGood = true;
+                }
+            }
+            catch (Exception ex) { UpdatePurchaseIsGood = false; UpdatePurchaseErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Update"; }
+        }
+
         //delete
         public static bool DeleteBreakdownIsGood = false;
         public static string DeleteBreakdownErrorMessage;

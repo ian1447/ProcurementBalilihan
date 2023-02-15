@@ -40,9 +40,9 @@
             this.mode_of_pr = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMemoEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.abc = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.posting = new DevExpress.XtraGrid.Columns.GridColumn();
             this.opening_of_bids = new DevExpress.XtraGrid.Columns.GridColumn();
             this.preproc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.posting = new DevExpress.XtraGrid.Columns.GridColumn();
             this.predib = new DevExpress.XtraGrid.Columns.GridColumn();
             this.detailed_bid_evaluation = new DevExpress.XtraGrid.Columns.GridColumn();
             this.award = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -123,9 +123,9 @@
             this.end_user,
             this.mode_of_pr,
             this.abc,
-            this.posting,
             this.opening_of_bids,
             this.preproc,
+            this.posting,
             this.predib,
             this.detailed_bid_evaluation,
             this.award,
@@ -231,20 +231,6 @@
             this.abc.Visible = true;
             this.abc.VisibleIndex = 4;
             // 
-            // posting
-            // 
-            this.posting.AppearanceCell.Options.UseTextOptions = true;
-            this.posting.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.posting.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.posting.AppearanceHeader.Options.UseTextOptions = true;
-            this.posting.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.posting.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.posting.Caption = "Posting";
-            this.posting.FieldName = "posting";
-            this.posting.Name = "posting";
-            this.posting.Visible = true;
-            this.posting.VisibleIndex = 5;
-            // 
             // opening_of_bids
             // 
             this.opening_of_bids.AppearanceCell.Options.UseTextOptions = true;
@@ -257,7 +243,7 @@
             this.opening_of_bids.FieldName = "opening_of_bids";
             this.opening_of_bids.Name = "opening_of_bids";
             this.opening_of_bids.Visible = true;
-            this.opening_of_bids.VisibleIndex = 6;
+            this.opening_of_bids.VisibleIndex = 5;
             // 
             // preproc
             // 
@@ -271,7 +257,21 @@
             this.preproc.FieldName = "preproc";
             this.preproc.Name = "preproc";
             this.preproc.Visible = true;
-            this.preproc.VisibleIndex = 7;
+            this.preproc.VisibleIndex = 6;
+            // 
+            // posting
+            // 
+            this.posting.AppearanceCell.Options.UseTextOptions = true;
+            this.posting.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.posting.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.posting.AppearanceHeader.Options.UseTextOptions = true;
+            this.posting.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.posting.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.posting.Caption = "Posting";
+            this.posting.FieldName = "posting";
+            this.posting.Name = "posting";
+            this.posting.Visible = true;
+            this.posting.VisibleIndex = 7;
             // 
             // predib
             // 
@@ -639,6 +639,7 @@
             this.btnupdate.Size = new System.Drawing.Size(195, 42);
             this.btnupdate.TabIndex = 24;
             this.btnupdate.Text = "Update Purchase";
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // PurchaseForm
             // 
