@@ -77,6 +77,8 @@
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
             this.bwLoadData = new System.ComponentModel.BackgroundWorker();
             this.btnupdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdatePurchase = new DevExpress.XtraBars.BarButtonItem();
+            this.btnViewPurchase = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -546,8 +548,10 @@
             this.btnEditPurchase,
             this.btnEditBreakdown,
             this.btnRefresh,
-            this.btnViewBreakdown});
-            this.barMenuGrid.MaxItemId = 4;
+            this.btnViewBreakdown,
+            this.btnUpdatePurchase,
+            this.btnViewPurchase});
+            this.barMenuGrid.MaxItemId = 6;
             // 
             // barDockControlTop
             // 
@@ -619,6 +623,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEditPurchase, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEditBreakdown, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnViewBreakdown, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnUpdatePurchase, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnViewPurchase, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnRefresh, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.popupMenuGrid.Manager = this.barMenuGrid;
             this.popupMenuGrid.Name = "popupMenuGrid";
@@ -640,6 +646,24 @@
             this.btnupdate.TabIndex = 24;
             this.btnupdate.Text = "Update Purchase";
             this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
+            // btnUpdatePurchase
+            // 
+            this.btnUpdatePurchase.Caption = "Update Purchase";
+            this.btnUpdatePurchase.Glyph = ((System.Drawing.Image)(resources.GetObject("btnUpdatePurchase.Glyph")));
+            this.btnUpdatePurchase.Id = 4;
+            this.btnUpdatePurchase.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnUpdatePurchase.LargeGlyph")));
+            this.btnUpdatePurchase.Name = "btnUpdatePurchase";
+            this.btnUpdatePurchase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUpdatePurchase_ItemClick);
+            // 
+            // btnViewPurchase
+            // 
+            this.btnViewPurchase.Caption = "View Purchase";
+            this.btnViewPurchase.Glyph = ((System.Drawing.Image)(resources.GetObject("btnViewPurchase.Glyph")));
+            this.btnViewPurchase.Id = 5;
+            this.btnViewPurchase.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnViewPurchase.LargeGlyph")));
+            this.btnViewPurchase.Name = "btnViewPurchase";
+            this.btnViewPurchase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewPurchase_ItemClick);
             // 
             // PurchaseForm
             // 
@@ -733,5 +757,7 @@
         private System.ComponentModel.BackgroundWorker bwLoadData;
         private DevExpress.XtraBars.BarButtonItem btnViewBreakdown;
         private DevExpress.XtraEditors.SimpleButton btnupdate;
+        private DevExpress.XtraBars.BarButtonItem btnUpdatePurchase;
+        private DevExpress.XtraBars.BarButtonItem btnViewPurchase;
     }
 }

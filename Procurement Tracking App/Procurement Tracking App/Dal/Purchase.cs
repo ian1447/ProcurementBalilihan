@@ -166,7 +166,7 @@ namespace Procurement_Tracking_App.Dal
 
         public static bool UpdatePurchaseIsGood = false;
         public static string UpdatePurchaseErrorMessage;
-        public static void UpdatePurchase(string _po_no, string _date)
+        public static void UpdatePurchase(string _po_no, string _date,string _status)
         {
             try
             {
@@ -177,6 +177,7 @@ namespace Procurement_Tracking_App.Dal
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new MySqlParameter("_date", _date));
                     cmd.Parameters.Add(new MySqlParameter("_po_no", _po_no));
+                    cmd.Parameters.Add(new MySqlParameter("_status", _status));
                     cmd.ExecuteNonQuery();
                     con.Close();
                     UpdatePurchaseIsGood = true;

@@ -32,6 +32,7 @@
             this.lblPrNo = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.gc = new DevExpress.XtraEditors.GroupControl();
+            this.dtpDate = new DevExpress.XtraEditors.DateEdit();
             this.memode = new DevExpress.XtraEditors.MemoEdit();
             this.medesc = new DevExpress.XtraEditors.MemoEdit();
             this.cbStatus = new System.Windows.Forms.ComboBox();
@@ -67,17 +68,17 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.dtpDate = new DevExpress.XtraEditors.DateEdit();
             this.bwUpdateStatus = new System.ComponentModel.BackgroundWorker();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.gc)).BeginInit();
             this.gc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtabc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtenduser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtprno.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPrNo
@@ -159,6 +160,33 @@
             this.gc.Size = new System.Drawing.Size(448, 640);
             this.gc.TabIndex = 26;
             this.gc.Text = "Procurement Details";
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.EditValue = null;
+            this.dtpDate.Location = new System.Drawing.Point(221, 601);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Properties.Appearance.Options.UseFont = true;
+            this.dtpDate.Properties.Appearance.Options.UseTextOptions = true;
+            this.dtpDate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dtpDate.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.dtpDate.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.dtpDate.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dtpDate.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.dtpDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpDate.Properties.DisplayFormat.FormatString = "MM-dd-yyyy";
+            this.dtpDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpDate.Properties.EditFormat.FormatString = "MM-dd-yyyy";
+            this.dtpDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpDate.Properties.Mask.EditMask = "MM-dd-yyyy";
+            this.dtpDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dtpDate.Properties.NullDate = false;
+            this.dtpDate.Size = new System.Drawing.Size(204, 26);
+            this.dtpDate.TabIndex = 51;
             // 
             // memode
             // 
@@ -636,33 +664,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // dtpDate
-            // 
-            this.dtpDate.EditValue = null;
-            this.dtpDate.Location = new System.Drawing.Point(221, 601);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Properties.Appearance.Options.UseFont = true;
-            this.dtpDate.Properties.Appearance.Options.UseTextOptions = true;
-            this.dtpDate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dtpDate.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.dtpDate.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.dtpDate.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.dtpDate.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.dtpDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpDate.Properties.DisplayFormat.FormatString = "MM-dd-yyyy";
-            this.dtpDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpDate.Properties.EditFormat.FormatString = "MM-dd-yyyy";
-            this.dtpDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpDate.Properties.Mask.EditMask = "MM-dd-yyyy";
-            this.dtpDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dtpDate.Properties.NullDate = false;
-            this.dtpDate.Size = new System.Drawing.Size(204, 26);
-            this.dtpDate.TabIndex = 51;
-            // 
             // bwUpdateStatus
             // 
             this.bwUpdateStatus.WorkerSupportsCancellation = true;
@@ -683,16 +684,17 @@
             this.Name = "UpdatePurchase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UpdatePurchase";
+            this.Shown += new System.EventHandler(this.UpdatePurchase_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.gc)).EndInit();
             this.gc.ResumeLayout(false);
             this.gc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtabc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtenduser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtprno.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -739,5 +741,6 @@
         public DevExpress.XtraEditors.LabelControl lblOpening;
         public DevExpress.XtraEditors.DateEdit dtpDate;
         private System.ComponentModel.BackgroundWorker bwUpdateStatus;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
