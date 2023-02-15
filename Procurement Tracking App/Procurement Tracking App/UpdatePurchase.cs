@@ -19,6 +19,7 @@ namespace Procurement_Tracking_App
             InitializeComponent();
         }
 
+        int bwUpdateStatusMaxRetries = 0;
         private void btnSave_Click(object sender, EventArgs e)
         {
             if ( dtpDate.Text == "" || cbStatus.Text == "")
@@ -29,6 +30,7 @@ namespace Procurement_Tracking_App
             {
                 if (cbStatus.Text == "Opening of Bids")
                 {
+                   
                     Purchase.UpdatePurchase(txtprno.Text, dtpDate.DateTime.ToString("yyyy-MM-dd"));
                     if (Purchase.UpdatePurchaseIsGood)
                         MessageBox.Show("Done");
