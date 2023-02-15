@@ -36,13 +36,11 @@
             this.btnpurchase = new DevExpress.XtraBars.BarButtonItem();
             this.btnprocurementtracking = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnprint = new DevExpress.XtraBars.BarButtonItem();
             this.btnusermanagement = new DevExpress.XtraBars.BarButtonItem();
             this.btnreport = new DevExpress.XtraBars.BarButtonItem();
             this.btnmainlogout = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -63,7 +61,6 @@
             this.btnpurchase,
             this.btnprocurementtracking,
             this.barButtonItem4,
-            this.btnprint,
             this.btnusermanagement,
             this.btnreport,
             this.btnmainlogout});
@@ -120,15 +117,6 @@
             this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
             this.barButtonItem4.Name = "barButtonItem4";
             // 
-            // btnprint
-            // 
-            this.btnprint.Caption = "Print";
-            this.btnprint.Glyph = ((System.Drawing.Image)(resources.GetObject("btnprint.Glyph")));
-            this.btnprint.Id = 6;
-            this.btnprint.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnprint.LargeGlyph")));
-            this.btnprint.Name = "btnprint";
-            this.btnprint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnprint_ItemClick);
-            // 
             // btnusermanagement
             // 
             this.btnusermanagement.Caption = "User Management";
@@ -159,8 +147,7 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Home";
             // 
@@ -168,16 +155,11 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnsupplier);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnpurchase);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnprint);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnreport);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnprocurementtracking);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnusermanagement);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnmainlogout);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnreport);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnprocurementtracking);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnmainlogout);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonStatusBar
             // 
@@ -229,11 +211,9 @@
         private DevExpress.XtraBars.BarButtonItem btnpurchase;
         private DevExpress.XtraBars.BarButtonItem btnprocurementtracking;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem btnprint;
         private DevExpress.XtraBars.BarButtonItem btnusermanagement;
         private DevExpress.XtraBars.BarButtonItem btnreport;
         private DevExpress.XtraBars.BarButtonItem btnmainlogout;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView noDocumentsView1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;

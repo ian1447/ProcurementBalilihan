@@ -27,7 +27,6 @@ namespace Procurement_Tracking_App
             }
             else
             {
-                MessageBox.Show(dtpDate.DateTime.ToString("yyyy-MM-dd"));
                 if (cbStatus.Text == "Opening of Bids")
                 {
                     Purchase.UpdatePurchase(txtprno.Text, dtpDate.DateTime.ToString("yyyy-MM-dd"));
@@ -42,6 +41,16 @@ namespace Procurement_Tracking_App
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bwUpdateStatus_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void bwUpdateStatus_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
         }
 
     }

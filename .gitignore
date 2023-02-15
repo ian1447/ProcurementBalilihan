@@ -23,3 +23,7 @@ Procurement Tracking App/Procurement Tracking App/Properties/licenses.licx
 *.exe
 *.pdb
 *.Cache
+*.Cache
+*.exe
+*.pdb
+*.resources

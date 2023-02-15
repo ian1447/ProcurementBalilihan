@@ -68,6 +68,7 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.dtpDate = new DevExpress.XtraEditors.DateEdit();
+            this.bwUpdateStatus = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.gc)).BeginInit();
             this.gc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memode.Properties)).BeginInit();
@@ -662,6 +663,12 @@
             this.dtpDate.Size = new System.Drawing.Size(204, 26);
             this.dtpDate.TabIndex = 51;
             // 
+            // bwUpdateStatus
+            // 
+            this.bwUpdateStatus.WorkerSupportsCancellation = true;
+            this.bwUpdateStatus.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwUpdateStatus_DoWork);
+            this.bwUpdateStatus.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwUpdateStatus_RunWorkerCompleted);
+            // 
             // UpdatePurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -731,5 +738,6 @@
         public DevExpress.XtraEditors.LabelControl lblPreProc;
         public DevExpress.XtraEditors.LabelControl lblOpening;
         public DevExpress.XtraEditors.DateEdit dtpDate;
+        private System.ComponentModel.BackgroundWorker bwUpdateStatus;
     }
 }
