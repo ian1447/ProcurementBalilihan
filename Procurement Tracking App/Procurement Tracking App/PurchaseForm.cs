@@ -86,6 +86,9 @@ namespace Procurement_Tracking_App
             {
                 HideLoading();
                 dtPurchase.DataSource = PurchaseTable;
+                btncancel.Enabled = false;
+                btnedit.Enabled = false;
+                btnupdate.Enabled = false;
             }
             else
             {
@@ -166,6 +169,7 @@ namespace Procurement_Tracking_App
                 btnadd.Enabled = false;
                 btncancel.Enabled = true;
                 btnedit.Enabled = true;
+                btnupdate.Enabled = true;
             }
             else
                 MessageBox.Show("No Row Selected.");

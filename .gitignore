@@ -19,3 +19,7 @@ Procurement Tracking App/Procurement Tracking App/obj/Debug/Procurement Tracking
 Procurement Tracking App/Procurement Tracking App/obj/Debug/Procurement_Tracking_App.Breakdown.resources
 Procurement Tracking App/Procurement Tracking App/obj/Debug/Procurement_Tracking_App.PurchaseForm.resources
 Procurement Tracking App/Procurement Tracking App/Properties/licenses.licx
+*.cache
+*.exe
+*.pdb
+*.Cache

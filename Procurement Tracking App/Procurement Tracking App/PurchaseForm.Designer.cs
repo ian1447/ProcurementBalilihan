@@ -76,6 +76,7 @@
             this.popupMenuGrid = new DevExpress.XtraBars.PopupMenu(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
             this.bwLoadData = new System.ComponentModel.BackgroundWorker();
+            this.btnupdate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -503,9 +504,9 @@
             // 
             this.btnadd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
-            this.btnadd.Location = new System.Drawing.Point(1247, 559);
+            this.btnadd.Location = new System.Drawing.Point(1193, 518);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(123, 42);
+            this.btnadd.Size = new System.Drawing.Size(177, 42);
             this.btnadd.TabIndex = 19;
             this.btnadd.Text = "Save";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
@@ -515,11 +516,11 @@
             this.btnedit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnedit.Enabled = false;
             this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
-            this.btnedit.Location = new System.Drawing.Point(1114, 559);
+            this.btnedit.Location = new System.Drawing.Point(992, 518);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(126, 42);
+            this.btnedit.Size = new System.Drawing.Size(195, 42);
             this.btnedit.TabIndex = 18;
-            this.btnedit.Text = "Edit";
+            this.btnedit.Text = "Edit Purchase Details";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btncancel
@@ -527,9 +528,9 @@
             this.btncancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btncancel.Enabled = false;
             this.btncancel.Image = ((System.Drawing.Image)(resources.GetObject("btncancel.Image")));
-            this.btncancel.Location = new System.Drawing.Point(988, 559);
+            this.btncancel.Location = new System.Drawing.Point(1193, 566);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(120, 42);
+            this.btncancel.Size = new System.Drawing.Size(177, 42);
             this.btncancel.TabIndex = 17;
             this.btncancel.Text = "Cancel";
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
@@ -628,11 +629,23 @@
             this.bwLoadData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadData_DoWork);
             this.bwLoadData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadData_RunWorkerCompleted);
             // 
+            // btnupdate
+            // 
+            this.btnupdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnupdate.Enabled = false;
+            this.btnupdate.Image = ((System.Drawing.Image)(resources.GetObject("btnupdate.Image")));
+            this.btnupdate.Location = new System.Drawing.Point(992, 566);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(195, 42);
+            this.btnupdate.TabIndex = 24;
+            this.btnupdate.Text = "Update Purchase";
+            // 
             // PurchaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 623);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btncancel);
@@ -718,5 +731,6 @@
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.ComponentModel.BackgroundWorker bwLoadData;
         private DevExpress.XtraBars.BarButtonItem btnViewBreakdown;
+        private DevExpress.XtraEditors.SimpleButton btnupdate;
     }
 }
