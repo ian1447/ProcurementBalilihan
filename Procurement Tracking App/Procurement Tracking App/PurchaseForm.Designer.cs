@@ -73,12 +73,12 @@
             this.btnEditBreakdown = new DevExpress.XtraBars.BarButtonItem();
             this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.btnViewBreakdown = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUpdatePurchase = new DevExpress.XtraBars.BarButtonItem();
+            this.btnViewPurchase = new DevExpress.XtraBars.BarButtonItem();
             this.popupMenuGrid = new DevExpress.XtraBars.PopupMenu(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
             this.bwLoadData = new System.ComponentModel.BackgroundWorker();
             this.btnupdate = new DevExpress.XtraEditors.SimpleButton();
-            this.btnUpdatePurchase = new DevExpress.XtraBars.BarButtonItem();
-            this.btnViewPurchase = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -617,6 +617,24 @@
             this.btnViewBreakdown.Name = "btnViewBreakdown";
             this.btnViewBreakdown.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewBreakdown_ItemClick);
             // 
+            // btnUpdatePurchase
+            // 
+            this.btnUpdatePurchase.Caption = "Update Purchase";
+            this.btnUpdatePurchase.Glyph = ((System.Drawing.Image)(resources.GetObject("btnUpdatePurchase.Glyph")));
+            this.btnUpdatePurchase.Id = 4;
+            this.btnUpdatePurchase.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnUpdatePurchase.LargeGlyph")));
+            this.btnUpdatePurchase.Name = "btnUpdatePurchase";
+            this.btnUpdatePurchase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUpdatePurchase_ItemClick);
+            // 
+            // btnViewPurchase
+            // 
+            this.btnViewPurchase.Caption = "View Purchase";
+            this.btnViewPurchase.Glyph = ((System.Drawing.Image)(resources.GetObject("btnViewPurchase.Glyph")));
+            this.btnViewPurchase.Id = 5;
+            this.btnViewPurchase.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnViewPurchase.LargeGlyph")));
+            this.btnViewPurchase.Name = "btnViewPurchase";
+            this.btnViewPurchase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewPurchase_ItemClick);
+            // 
             // popupMenuGrid
             // 
             this.popupMenuGrid.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -646,24 +664,6 @@
             this.btnupdate.TabIndex = 24;
             this.btnupdate.Text = "Update Purchase";
             this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
-            // 
-            // btnUpdatePurchase
-            // 
-            this.btnUpdatePurchase.Caption = "Update Purchase";
-            this.btnUpdatePurchase.Glyph = ((System.Drawing.Image)(resources.GetObject("btnUpdatePurchase.Glyph")));
-            this.btnUpdatePurchase.Id = 4;
-            this.btnUpdatePurchase.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnUpdatePurchase.LargeGlyph")));
-            this.btnUpdatePurchase.Name = "btnUpdatePurchase";
-            this.btnUpdatePurchase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUpdatePurchase_ItemClick);
-            // 
-            // btnViewPurchase
-            // 
-            this.btnViewPurchase.Caption = "View Purchase";
-            this.btnViewPurchase.Glyph = ((System.Drawing.Image)(resources.GetObject("btnViewPurchase.Glyph")));
-            this.btnViewPurchase.Id = 5;
-            this.btnViewPurchase.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnViewPurchase.LargeGlyph")));
-            this.btnViewPurchase.Name = "btnViewPurchase";
-            this.btnViewPurchase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewPurchase_ItemClick);
             // 
             // PurchaseForm
             // 
