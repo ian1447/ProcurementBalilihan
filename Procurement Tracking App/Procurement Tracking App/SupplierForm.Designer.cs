@@ -49,10 +49,10 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.tsrefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.tsdelete = new DevExpress.XtraBars.BarButtonItem();
             this.popupMenuGrid = new DevExpress.XtraBars.PopupMenu(this.components);
             this.bwSupplierGet = new System.ComponentModel.BackgroundWorker();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
-            this.tsdelete = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtsupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvsupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSupplierName.Properties)).BeginInit();
@@ -66,10 +66,12 @@
             this.dtsupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtsupplier.Location = new System.Drawing.Point(342, 12);
+            this.dtsupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtsupplier.Location = new System.Drawing.Point(513, 18);
             this.dtsupplier.MainView = this.gvsupplier;
+            this.dtsupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtsupplier.Name = "dtsupplier";
-            this.dtsupplier.Size = new System.Drawing.Size(526, 463);
+            this.dtsupplier.Size = new System.Drawing.Size(789, 677);
             this.dtsupplier.TabIndex = 0;
             this.dtsupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvsupplier});
@@ -129,44 +131,49 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(12, 24);
+            this.labelControl1.Location = new System.Drawing.Point(18, 35);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(259, 23);
+            this.labelControl1.Size = new System.Drawing.Size(392, 35);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "SUPPLIERS INFORMATION";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(12, 72);
+            this.labelControl2.Location = new System.Drawing.Point(18, 105);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(137, 18);
+            this.labelControl2.Size = new System.Drawing.Size(214, 28);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "SUPPLIER\'S NAME: *";
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(12, 207);
+            this.labelControl3.Location = new System.Drawing.Point(18, 303);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(160, 18);
+            this.labelControl3.Size = new System.Drawing.Size(253, 28);
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "SUPPLIER\'S ADDRESS: *";
             // 
             // txtSupplierName
             // 
-            this.txtSupplierName.Location = new System.Drawing.Point(49, 96);
+            this.txtSupplierName.Location = new System.Drawing.Point(74, 140);
+            this.txtSupplierName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSupplierName.Name = "txtSupplierName";
             this.txtSupplierName.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSupplierName.Size = new System.Drawing.Size(274, 96);
+            this.txtSupplierName.Size = new System.Drawing.Size(411, 140);
             this.txtSupplierName.TabIndex = 5;
             // 
             // txtSupplierAddress
             // 
-            this.txtSupplierAddress.Location = new System.Drawing.Point(49, 244);
+            this.txtSupplierAddress.Location = new System.Drawing.Point(74, 357);
+            this.txtSupplierAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSupplierAddress.Name = "txtSupplierAddress";
             this.txtSupplierAddress.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSupplierAddress.Size = new System.Drawing.Size(274, 96);
+            this.txtSupplierAddress.Size = new System.Drawing.Size(411, 140);
             this.txtSupplierAddress.TabIndex = 6;
             // 
             // btncancel
@@ -174,9 +181,10 @@
             this.btncancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btncancel.Enabled = false;
             this.btncancel.Image = ((System.Drawing.Image)(resources.GetObject("btncancel.Image")));
-            this.btncancel.Location = new System.Drawing.Point(12, 433);
+            this.btncancel.Location = new System.Drawing.Point(18, 633);
+            this.btncancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(104, 42);
+            this.btncancel.Size = new System.Drawing.Size(156, 61);
             this.btncancel.TabIndex = 7;
             this.btncancel.Text = "Cancel";
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
@@ -186,9 +194,10 @@
             this.btnedit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnedit.Enabled = false;
             this.btnedit.Image = ((System.Drawing.Image)(resources.GetObject("btnedit.Image")));
-            this.btnedit.Location = new System.Drawing.Point(122, 433);
+            this.btnedit.Location = new System.Drawing.Point(183, 633);
+            this.btnedit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(104, 42);
+            this.btnedit.Size = new System.Drawing.Size(156, 61);
             this.btnedit.TabIndex = 8;
             this.btnedit.Text = "Edit";
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
@@ -197,9 +206,10 @@
             // 
             this.btnadd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnadd.Image = ((System.Drawing.Image)(resources.GetObject("btnadd.Image")));
-            this.btnadd.Location = new System.Drawing.Point(232, 433);
+            this.btnadd.Location = new System.Drawing.Point(348, 633);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(104, 42);
+            this.btnadd.Size = new System.Drawing.Size(156, 61);
             this.btnadd.TabIndex = 9;
             this.btnadd.Text = "Add";
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
@@ -221,28 +231,32 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(880, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1320, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 487);
-            this.barDockControlBottom.Size = new System.Drawing.Size(880, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 712);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1320, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 487);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 712);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(880, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 487);
+            this.barDockControlRight.Location = new System.Drawing.Point(1320, 0);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 712);
             // 
             // tsrefresh
             // 
@@ -252,6 +266,15 @@
             this.tsrefresh.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("tsrefresh.LargeGlyph")));
             this.tsrefresh.Name = "tsrefresh";
             this.tsrefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.tsrefresh_ItemClick);
+            // 
+            // tsdelete
+            // 
+            this.tsdelete.Caption = "Delete";
+            this.tsdelete.Glyph = ((System.Drawing.Image)(resources.GetObject("tsdelete.Glyph")));
+            this.tsdelete.Id = 1;
+            this.tsdelete.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("tsdelete.LargeGlyph")));
+            this.tsdelete.Name = "tsdelete";
+            this.tsdelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.tsdelete_ItemClick);
             // 
             // popupMenuGrid
             // 
@@ -267,20 +290,11 @@
             this.bwSupplierGet.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwSupplierGet_DoWork);
             this.bwSupplierGet.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwSupplierGet_RunWorkerCompleted);
             // 
-            // tsdelete
-            // 
-            this.tsdelete.Caption = "Delete";
-            this.tsdelete.Glyph = ((System.Drawing.Image)(resources.GetObject("tsdelete.Glyph")));
-            this.tsdelete.Id = 1;
-            this.tsdelete.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("tsdelete.LargeGlyph")));
-            this.tsdelete.Name = "tsdelete";
-            this.tsdelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.tsdelete_ItemClick);
-            // 
             // SupplierForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 487);
+            this.ClientSize = new System.Drawing.Size(1320, 712);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btncancel);
@@ -294,6 +308,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SupplierForm";
             this.Text = "SupplierForm";
             this.Shown += new System.EventHandler(this.SupplierForm_Shown);

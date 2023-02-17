@@ -73,6 +73,7 @@
     <Compile Include="Dal\Login.cs" />
     <Compile Include="Dal\Purchase.cs" />
     <Compile Include="Dal\Supplier.cs" />
+    <Compile Include="Dal\Users.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
