@@ -1,1 +1,1 @@
-Server = 192.168.13.43; Database = procurement_tracking; Uid=system_admin; Pwd=system_admin; Port=3306
+Server = localhost; Database = procurement_tracking; Uid=system_admin; Pwd=system_admin; Port=3306

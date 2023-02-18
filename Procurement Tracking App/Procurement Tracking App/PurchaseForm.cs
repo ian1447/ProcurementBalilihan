@@ -305,23 +305,23 @@ namespace Procurement_Tracking_App
                 up.memode.Text = focusRowView.Row[4].ToString();
                 up.txtabc.Text = focusRowView.Row[5].ToString();
                 if (focusRowView.Row[6].ToString() != "")
-                    up.lblOpening.Text = Convert.ToDateTime(focusRowView.Row[6]).ToString("MM/dd/yyyy");
+                    up.lblOpening.Text = Convert.ToDateTime(focusRowView.Row[6]).ToString("dd/MM/yyyy");
                 if (focusRowView.Row[7].ToString() != "")
-                    up.lblPreProc.Text = Convert.ToDateTime(focusRowView.Row[7]).ToString("MM/dd/yyyy");
+                    up.lblPreProc.Text = Convert.ToDateTime(focusRowView.Row[7]).ToString("dd/MM/yyyy");
                 if (focusRowView.Row[8].ToString() != "")
-                    up.lblPosting.Text = Convert.ToDateTime(focusRowView.Row[8]).ToString("MM/dd/yyyy");
+                    up.lblPosting.Text = Convert.ToDateTime(focusRowView.Row[8]).ToString("dd/MM/yyyy");
                 if (focusRowView.Row[9].ToString() != "")
-                    up.lblPreBid.Text = Convert.ToDateTime(focusRowView.Row[9]).ToString("MM/dd/yyyy");
+                    up.lblPreBid.Text = Convert.ToDateTime(focusRowView.Row[9]).ToString("dd/MM/yyyy");
                 if (focusRowView.Row[10].ToString() != "")
-                    up.lblBidEval.Text = Convert.ToDateTime(focusRowView.Row[10]).ToString("MM/dd/yyyy");
+                    up.lblBidEval.Text = Convert.ToDateTime(focusRowView.Row[10]).ToString("dd/MM/yyyy");
                 if (focusRowView.Row[11].ToString() != "")
-                    up.lblAward.Text = Convert.ToDateTime(focusRowView.Row[11]).ToString("MM/dd/yyyy");
+                    up.lblAward.Text = Convert.ToDateTime(focusRowView.Row[11]).ToString("dd/MM/yyyy");
                 if (focusRowView.Row[12].ToString() != "")
-                    up.lblPO.Text = Convert.ToDateTime(focusRowView.Row[12]).ToString("MM/dd/yyyy");
+                    up.lblPO.Text = Convert.ToDateTime(focusRowView.Row[12]).ToString("dd/MM/yyyy");
                 if (focusRowView.Row[13].ToString() != "")
-                    up.lblNTP.Text = Convert.ToDateTime(focusRowView.Row[13]).ToString("MM/dd/yyyy");
+                    up.lblNTP.Text = Convert.ToDateTime(focusRowView.Row[13]).ToString("dd/MM/yyyy");
                 if (focusRowView.Row[14].ToString() != "")
-                    up.lblDelivery.Text = Convert.ToDateTime(focusRowView.Row[14]).ToString("MM/dd/yyyy");
+                    up.lblDelivery.Text = Convert.ToDateTime(focusRowView.Row[14]).ToString("dd/MM/yyyy");
                 up.ShowDialog();
                 btncancel.PerformClick();
                 btnRefresh.PerformClick();

@@ -55,22 +55,23 @@
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(478, -1);
+            this.label1.Location = new System.Drawing.Point(558, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(3, 538);
+            this.label1.Size = new System.Drawing.Size(3, 662);
             this.label1.TabIndex = 0;
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(134, 12);
+            this.pictureEdit1.Location = new System.Drawing.Point(156, 15);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(230, 220);
+            this.pictureEdit1.Size = new System.Drawing.Size(268, 271);
             this.pictureEdit1.TabIndex = 1;
             // 
             // groupControl1
@@ -81,36 +82,40 @@
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(57, 251);
+            this.groupControl1.Location = new System.Drawing.Point(66, 309);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(387, 175);
+            this.groupControl1.Size = new System.Drawing.Size(451, 215);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "groupControl1";
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(47, 107);
+            this.labelControl3.Location = new System.Drawing.Point(55, 132);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(281, 25);
+            this.labelControl3.Size = new System.Drawing.Size(346, 31);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "MAGSIJA, BALILIHAN, BOHOL";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(96, 76);
+            this.labelControl2.Location = new System.Drawing.Point(112, 94);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(190, 25);
+            this.labelControl2.Size = new System.Drawing.Size(233, 31);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "BALILIHAN CAMPUS";
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(20, 45);
+            this.labelControl1.Location = new System.Drawing.Point(23, 55);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(339, 25);
+            this.labelControl1.Size = new System.Drawing.Size(415, 31);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "BOHOL ISLAND STATE UNIVERSITY";
             // 
@@ -119,21 +124,23 @@
             this.labelControl4.Appearance.BackColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl4.Location = new System.Drawing.Point(543, 33);
+            this.labelControl4.Location = new System.Drawing.Point(633, 41);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Padding = new System.Windows.Forms.Padding(10);
-            this.labelControl4.Size = new System.Drawing.Size(358, 57);
+            this.labelControl4.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.labelControl4.Size = new System.Drawing.Size(433, 69);
             this.labelControl4.TabIndex = 4;
-            this.labelControl4.Text = "Procurement Tracking App";
+            this.labelControl4.Text = "Procurement Tracker App";
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.BackColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl5.Location = new System.Drawing.Point(504, 111);
+            this.labelControl5.Location = new System.Drawing.Point(588, 137);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(119, 25);
+            this.labelControl5.Size = new System.Drawing.Size(148, 31);
             this.labelControl5.TabIndex = 3;
             this.labelControl5.Text = "Username: *";
             // 
@@ -142,45 +149,50 @@
             this.labelControl6.Appearance.BackColor = System.Drawing.Color.White;
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl6.Location = new System.Drawing.Point(504, 189);
+            this.labelControl6.Location = new System.Drawing.Point(588, 233);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(113, 25);
+            this.labelControl6.Size = new System.Drawing.Size(139, 31);
             this.labelControl6.TabIndex = 5;
             this.labelControl6.Text = "Password: *";
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(534, 142);
+            this.txtusername.Location = new System.Drawing.Point(623, 175);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtusername.Name = "txtusername";
             this.txtusername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusername.Properties.Appearance.Options.UseFont = true;
-            this.txtusername.Size = new System.Drawing.Size(367, 32);
+            this.txtusername.Size = new System.Drawing.Size(428, 38);
             this.txtusername.TabIndex = 6;
             // 
             // txtpasswd
             // 
-            this.txtpasswd.Location = new System.Drawing.Point(534, 230);
+            this.txtpasswd.Location = new System.Drawing.Point(623, 283);
+            this.txtpasswd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpasswd.Name = "txtpasswd";
             this.txtpasswd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpasswd.Properties.Appearance.Options.UseFont = true;
             this.txtpasswd.Properties.PasswordChar = '*';
-            this.txtpasswd.Size = new System.Drawing.Size(367, 32);
+            this.txtpasswd.Size = new System.Drawing.Size(428, 38);
             this.txtpasswd.TabIndex = 7;
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(629, 296);
+            this.btnlogin.Location = new System.Drawing.Point(734, 364);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(148, 54);
+            this.btnlogin.Size = new System.Drawing.Size(173, 66);
             this.btnlogin.TabIndex = 8;
             this.btnlogin.Text = "LOGIN";
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // btnchangecon
             // 
-            this.btnchangecon.Location = new System.Drawing.Point(504, 409);
+            this.btnchangecon.Location = new System.Drawing.Point(588, 503);
+            this.btnchangecon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnchangecon.Name = "btnchangecon";
-            this.btnchangecon.Size = new System.Drawing.Size(187, 39);
+            this.btnchangecon.Size = new System.Drawing.Size(218, 48);
             this.btnchangecon.TabIndex = 9;
             this.btnchangecon.Text = "Change Connection";
             this.btnchangecon.Click += new System.EventHandler(this.btnchangecon_Click);
@@ -190,9 +202,10 @@
             this.lblstatus.Appearance.BackColor = System.Drawing.Color.White;
             this.lblstatus.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstatus.Appearance.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblstatus.Location = new System.Drawing.Point(767, 418);
+            this.lblstatus.Location = new System.Drawing.Point(895, 514);
+            this.lblstatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblstatus.Name = "lblstatus";
-            this.lblstatus.Size = new System.Drawing.Size(122, 18);
+            this.lblstatus.Size = new System.Drawing.Size(158, 23);
             this.lblstatus.TabIndex = 10;
             this.lblstatus.Text = "Connection Status:";
             // 
@@ -205,11 +218,11 @@
             // LoginForm
             // 
             this.AcceptButton = this.btnlogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
-            this.ClientSize = new System.Drawing.Size(961, 460);
+            this.ClientSize = new System.Drawing.Size(1121, 566);
             this.Controls.Add(this.lblstatus);
             this.Controls.Add(this.btnchangecon);
             this.Controls.Add(this.btnlogin);
@@ -222,6 +235,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";

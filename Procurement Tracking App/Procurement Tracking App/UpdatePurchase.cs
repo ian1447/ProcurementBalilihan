@@ -95,6 +95,7 @@ namespace Procurement_Tracking_App
                     }
                     else
                     {
+                        MessageBox.Show(lblOpening.Text);
                         if (dtpDate.DateTime < Convert.ToDateTime(lblOpening.Text))
                             MessageBox.Show("Date Must be later than the Opening of Bids Date!");
                         else
@@ -272,7 +273,7 @@ namespace Procurement_Tracking_App
             if (Purchase.UpdatePurchaseIsGood)
             {
                 HideLoading();
-                MessageBox.Show("Done");
+                MessageBox.Show("Successfully Saved");
                 this.Close();
             }
             else
