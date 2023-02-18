@@ -41,7 +41,7 @@ CREATE TABLE `purchase` (
 
 /*Data for the table `purchase` */
 
-insert  into `purchase`(`id`,`po_no`,`description`,`end_user`,`mode_of_pr`,`abc`,`opening_of_bids`,`preproc`,`posting`,`prebid`,`detailed_bid_evaluation`,`award`,`po`,`ntp`,`delivery`) values (4,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(6,'1232','43','IRENE G. MAGLAHOS','PUBLIC BIDDING',23,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,'234','23','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT (SVP)',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,'23232','123wala lang ahkds jahsdh f','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(9,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(10,'sd','23','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(11,'asd','qwe','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT (SVP)',123,'2023-03-22',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(12,'32','32','DR. JOCELYN P. LUMACTUD','NEGOTIATED PROCUREMENT (SVP)',12,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(13,'78','786','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',78,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(14,'45','345','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',345,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(15,'23','123123','DR. DHOREE MAY R. MARAVILLA','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(16,'123343','231','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT (SVP)',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(17,'23234234','243','DR. JOCELYN P. LUMACTUD','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(18,'123123123','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(19,'342','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',1234345,NULL,NULL,'2023-02-15 00:00:00',NULL,NULL,NULL,NULL,NULL,NULL),(20,'31','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT (SVP)',123,'2023-02-15','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00'),(21,'123qwe','123','MARC BENIGNO C. OLAGUIR','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(22,'asdzxc','asd','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',212,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `purchase`(`id`,`po_no`,`description`,`end_user`,`mode_of_pr`,`abc`,`opening_of_bids`,`preproc`,`posting`,`prebid`,`detailed_bid_evaluation`,`award`,`po`,`ntp`,`delivery`) values (4,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-01','2023-02-02 00:00:00','2023-02-03 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-28 00:00:00'),(5,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-01','2023-02-02 00:00:00','2023-02-03 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-28 00:00:00'),(6,'1232','43','IRENE G. MAGLAHOS','PUBLIC BIDDING',23,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,'234','23','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT (SVP)',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,'23232','123wala lang ahkds jahsdh f','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(9,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-01','2023-02-02 00:00:00','2023-02-03 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-28 00:00:00'),(10,'sd','23','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(11,'asd','qwe','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT (SVP)',123,'2023-03-22',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(12,'32','32','DR. JOCELYN P. LUMACTUD','NEGOTIATED PROCUREMENT (SVP)',12,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(13,'78','786','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',78,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(14,'45','345','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',345,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(15,'23','123123','DR. DHOREE MAY R. MARAVILLA','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(16,'123343','231','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT (SVP)',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(17,'23234234','243','DR. JOCELYN P. LUMACTUD','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(18,'123123123','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(19,'342','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',1234345,NULL,NULL,'2023-02-15 00:00:00',NULL,NULL,NULL,NULL,NULL,NULL),(20,'31','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT (SVP)',123,'2023-02-15','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00'),(21,'123qwe','123','MARC BENIGNO C. OLAGUIR','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(22,'asdzxc','asd','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',212,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*Table structure for table `purchase_breakdown` */
 
@@ -73,11 +73,11 @@ CREATE TABLE `suppliers` (
   `name` varchar(255) DEFAULT NULL,
   `address` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `suppliers` */
 
-insert  into `suppliers`(`id`,`name`,`address`) values (1,'try','try lang gd'),(2,'try2','trial 2'),(3,'Alturas Mall','Tagbilaran'),(4,'ICM','Dao Tagbilaran City');
+insert  into `suppliers`(`id`,`name`,`address`) values (1,'try','try lang gd'),(2,'kitt','dasdasdas'),(3,'Alturas Mall','Tagbilaran'),(4,'ICM','Dao Tagbilaran City');
 
 /*Table structure for table `users` */
 
@@ -90,11 +90,11 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `privilege` enum('Admin','User') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`name`,`username`,`password`,`privilege`) values (1,'admin','admin','*4ACFE3202A5FF5CF467898FC58AAB1D615029441','Admin');
+insert  into `users`(`id`,`name`,`username`,`password`,`privilege`) values (1,'admin','admin','*4ACFE3202A5FF5CF467898FC58AAB1D615029441','Admin'),(2,'kitt','kitt','123','User');
 
 /* Procedure structure for procedure `sp_purchase_add` */
 
@@ -102,7 +102,7 @@ insert  into `users`(`id`,`name`,`username`,`password`,`privilege`) values (1,'a
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_add`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purchase_add`(
 	in _po_no varchar(255),
 	in _description text,
 	in _end_user varchar (255),
@@ -121,7 +121,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_breakdown_add`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purchase_breakdown_add`(
 	in _po_no varchar (255),
 	in _property_no varchar (255),
 	in _unit varchar (255),
@@ -143,7 +143,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_breakdown_delete`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purchase_breakdown_delete`(
 	in _id int (11)
     )
 BEGIN
@@ -157,7 +157,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_breakdown_get`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purchase_breakdown_get`(
 	in _po_no varchar(255)
     )
 BEGIN
@@ -171,7 +171,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_edit`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purchase_edit`(
 	IN _po_no VARCHAR (255),
 	IN _description VARCHAR (255),
 	IN _end_user VARCHAR (255),
@@ -189,7 +189,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_get`()
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purchase_get`()
 BEGIN
 	select * from `purchase`;
     END */$$
@@ -201,7 +201,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_get_pr`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purchase_get_pr`(
 	in _po_no varchar (255)
     )
 BEGIN
@@ -217,10 +217,37 @@ DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_update`(
 	in _date datetime,
-	IN _po_no VARCHAR (255)
+	IN _po_no VARCHAR (255),
+	in _status varchar (255)
 	)
 BEGIN
-	update `purchase` set opening_of_bids = DATE(now()) WHERE po_no = _po_no;
+	if _status = "Opening of Bids" THEN
+		update `purchase` set opening_of_bids = DATE(_date) WHERE po_no = _po_no;
+	end if;
+	IF _status = "Pre-Proc" THEN
+		UPDATE `purchase` SET preproc = DATE(_date) WHERE po_no = _po_no;
+	END IF;	
+	IF _status = "Posting" THEN
+		UPDATE `purchase` SET posting = DATE(_date) WHERE po_no = _po_no;
+	END IF;
+	IF _status = "Pre-Bid" THEN
+		UPDATE `purchase` SET prebid = DATE(_date) WHERE po_no = _po_no;
+	END IF;
+	IF _status = "Detailed Bid Evaluation" THEN
+		UPDATE `purchase` SET detailed_bid_evaluation = DATE(_date) WHERE po_no = _po_no;
+	END IF;
+	IF _status = "Award" THEN
+		UPDATE `purchase` SET award = DATE(_date) WHERE po_no = _po_no;
+	END IF;
+	IF _status = "PO" THEN
+		UPDATE `purchase` SET po = DATE(_date) WHERE po_no = _po_no;
+	END IF;
+	IF _status = "NTP" THEN
+		UPDATE `purchase` SET ntp = DATE(_date) WHERE po_no = _po_no;
+	END IF;
+	IF _status = "Delivery" THEN
+		UPDATE `purchase` SET delivery = DATE(_date) WHERE po_no = _po_no;
+	END IF;
     END */$$
 DELIMITER ;
 
@@ -230,7 +257,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_supplier_add`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_supplier_add`(
 	in _name varchar (255),
 	in _address varchar (255)
     )
@@ -246,7 +273,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_supplier_delete`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_supplier_delete`(
 	in _id int (11)
     )
 BEGIN
@@ -260,7 +287,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_supplier_edit`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_supplier_edit`(
 	in _name varchar (255),
 	in _address varchar (255),
 	in _id int (11)
@@ -276,9 +303,62 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_supplier_get`()
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_supplier_get`()
 BEGIN
 	select * from suppliers;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_users_add` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_users_add` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_users_add`(
+	in _name text,
+	in _username text,
+	in _password text,
+	in _privelege text
+    )
+BEGIN
+		insert into `users` (`name`, `username`, `password`,`privilege`)
+		values(_name, _username, PASSWORD(_password), _privelege);
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_users_edit` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_users_edit` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_users_edit`(
+	in _id int(11),
+	in _name text,
+	in _username text,
+	in _password text 
+    )
+BEGIN
+	update `users` 
+	set
+		`name` = _name,
+		`username` = _username,
+		`password` = _password
+	where 
+		id = _id;
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_users_get` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_users_get` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_users_get`()
+BEGIN
+	select * from users;
     END */$$
 DELIMITER ;
 
