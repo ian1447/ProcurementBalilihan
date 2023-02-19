@@ -95,9 +95,8 @@ namespace Procurement_Tracking_App
                     }
                     else
                     {
-                        MessageBox.Show(lblOpening.Text);
                         if (dtpDate.DateTime < Convert.ToDateTime(lblOpening.Text))
-                            MessageBox.Show("Date Must be later than the Opening of Bids Date!");
+                            MessageBox.Show("Invalid Date");
                         else
                         {
                             if (!bwUpdateStatus.IsBusy)
@@ -117,7 +116,7 @@ namespace Procurement_Tracking_App
                     {
                         if (dtpDate.DateTime < Convert.ToDateTime(lblPreProc.Text))
                         {
-                            MessageBox.Show("Date Must be later than the Pre-Proc date!");
+                            MessageBox.Show("Invalid Date");
                         }
                         else
                         {
@@ -138,7 +137,7 @@ namespace Procurement_Tracking_App
                     {
                         if (dtpDate.DateTime < Convert.ToDateTime(lblPosting.Text))
                         {
-                            MessageBox.Show("Date Must be later than the Posting Date!");
+                            MessageBox.Show("Invalid Date");
                         }
                         else
                         {
@@ -159,7 +158,7 @@ namespace Procurement_Tracking_App
                     {
                         if (dtpDate.DateTime < Convert.ToDateTime(lblPreBid.Text))
                         {
-                            MessageBox.Show("Date Must be later than the Pre-Bid Date!");
+                            MessageBox.Show("Invalid Date");
                         }
                         else
                         {
@@ -180,7 +179,7 @@ namespace Procurement_Tracking_App
                     {
                         if (dtpDate.DateTime < Convert.ToDateTime(lblBidEval.Text))
                         {
-                            MessageBox.Show("Date Must be later than the Detailed Bid Evaluation Date!");
+                            MessageBox.Show("Invalid Date");
                         }
                         else
                         {
@@ -201,7 +200,7 @@ namespace Procurement_Tracking_App
                     {
                         if (dtpDate.DateTime < Convert.ToDateTime(lblAward.Text))
                         {
-                            MessageBox.Show("Date Must be later than the Award Date!");
+                            MessageBox.Show("Invalid Date");
                         }
                         else
                         {
@@ -222,7 +221,7 @@ namespace Procurement_Tracking_App
                     {
                         if (dtpDate.DateTime < Convert.ToDateTime(lblPO.Text))
                         {
-                            MessageBox.Show("Date Must be later than the PO Date!");
+                            MessageBox.Show("Invalid Date");
                         }
                         else
                         {
@@ -243,7 +242,7 @@ namespace Procurement_Tracking_App
                     {
                         if (dtpDate.DateTime < Convert.ToDateTime(lblNTP.Text) || lblNTP.Text == "")
                         {
-                            MessageBox.Show("Date Must be later than the NTP Date!");
+                            MessageBox.Show("Invalid Date");
                         }
                         else
                         {

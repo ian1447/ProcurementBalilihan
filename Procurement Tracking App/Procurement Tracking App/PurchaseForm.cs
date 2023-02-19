@@ -57,6 +57,8 @@ namespace Procurement_Tracking_App
         #endregion
 
         DataTable PurchaseTable = new DataTable();
+        string prno;
+        string rownumber;
         private void PurchaseForm_Shown(object sender, EventArgs e)
         {
             LoadData();
@@ -86,6 +88,11 @@ namespace Procurement_Tracking_App
             {
                 HideLoading();
                 dtPurchase.DataSource = PurchaseTable;
+                string YearLabel = DateTime.Now.Year.ToString();
+                string MonthLabel = DateTime.Now.Month.ToString();
+                rownumber = PurchaseTable.Rows.Count.ToString();
+                prno = YearLabel + "-" + MonthLabel + " " + rownumber;
+                txtPrNo.Text = prno;
                 btncancel.Enabled = false;
                 btnedit.Enabled = false;
                 btnupdate.Enabled = false;
@@ -188,6 +195,11 @@ namespace Procurement_Tracking_App
             btncancel.Enabled = false;
             btnedit.Enabled = false;
             btnupdate.Enabled = false;
+            string YearLabel = DateTime.Now.Year.ToString();
+            string MonthLabel = DateTime.Now.Month.ToString();
+            rownumber = PurchaseTable.Rows.Count.ToString();
+            prno = YearLabel + "-" + MonthLabel + " " + rownumber;
+            txtPrNo.Text = prno;
         }
 
         private void btnedit_Click(object sender, EventArgs e)
