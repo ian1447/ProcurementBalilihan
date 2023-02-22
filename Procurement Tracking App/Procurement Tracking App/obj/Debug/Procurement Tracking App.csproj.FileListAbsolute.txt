@@ -98,3 +98,5 @@ D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App
 D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.csproj.GenerateResource.Cache
 D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.exe.licenses
 C:\Users\yanni\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.csprojResolveAssemblyReference.cache
+D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\bin\Debug\Procurement Tracking App.exe.config
+D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.ProcurementReport.resources
