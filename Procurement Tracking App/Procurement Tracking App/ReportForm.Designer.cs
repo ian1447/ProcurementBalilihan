@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< Updated upstream
-=======
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
->>>>>>> Stashed changes
             this.dtReport = new DevExpress.XtraGrid.GridControl();
             this.gvReport = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,14 +51,9 @@
             this.delivery = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMarqueeProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
-<<<<<<< Updated upstream
             this.bwLoadData = new System.ComponentModel.BackgroundWorker();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
-=======
-            this.bwLoadProcurement = new System.ComponentModel.BackgroundWorker();
-            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
             this.bwLoadBreakdown = new System.ComponentModel.BackgroundWorker();
->>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.dtReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -74,22 +66,18 @@
             this.dtReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< Updated upstream
-            this.dtReport.Location = new System.Drawing.Point(1, 10);
-=======
             this.dtReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.dtReport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-            this.dtReport.Location = new System.Drawing.Point(2, 14);
->>>>>>> Stashed changes
+            gridLevelNode1});
+            this.dtReport.Location = new System.Drawing.Point(12, 12);
             this.dtReport.MainView = this.gvReport;
             this.dtReport.Name = "dtReport";
             this.dtReport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMemoEdit1,
             this.repositoryItemMarqueeProgressBar1,
             this.repositoryItemMemoEdit2});
-            this.dtReport.Size = new System.Drawing.Size(781, 421);
+            this.dtReport.Size = new System.Drawing.Size(1018, 482);
             this.dtReport.TabIndex = 2;
             this.dtReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvReport});
@@ -351,18 +339,19 @@
             // btnPrintReport
             // 
             this.btnPrintReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrintReport.Location = new System.Drawing.Point(606, 438);
+            this.btnPrintReport.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintReport.Image")));
+            this.btnPrintReport.Location = new System.Drawing.Point(853, 497);
             this.btnPrintReport.Name = "btnPrintReport";
             this.btnPrintReport.Size = new System.Drawing.Size(177, 42);
             this.btnPrintReport.TabIndex = 20;
             this.btnPrintReport.Text = "Print";
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
             // 
-            // bwLoadProcurement
+            // bwLoadData
             // 
-            this.bwLoadProcurement.WorkerSupportsCancellation = true;
-            this.bwLoadProcurement.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadProcurement_DoWork);
-            this.bwLoadProcurement.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadProcurement_RunWorkerCompleted);
+            this.bwLoadData.WorkerSupportsCancellation = true;
+            this.bwLoadData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadProcurement_DoWork);
+            this.bwLoadData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadProcurement_RunWorkerCompleted);
             // 
             // bwLoadBreakdown
             // 
@@ -370,27 +359,16 @@
             this.bwLoadBreakdown.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadBreakdown_DoWork);
             this.bwLoadBreakdown.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadBreakdown_RunWorkerCompleted);
             // 
-            // bwLoadData
-            // 
-            this.bwLoadData.WorkerSupportsCancellation = true;
-            this.bwLoadData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadData_DoWork);
-            this.bwLoadData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadData_RunWorkerCompleted);
-            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 489);
+            this.ClientSize = new System.Drawing.Size(1038, 548);
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.dtReport);
-<<<<<<< Updated upstream
-            this.Name = "ReportForm";
-            this.Text = "ReportForm";
-=======
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportForm";
             this.Text = "Report Form";
->>>>>>> Stashed changes
             this.Shown += new System.EventHandler(this.ReportForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dtReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvReport)).EndInit();
@@ -424,13 +402,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn delivery;
         private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar repositoryItemMarqueeProgressBar1;
         private DevExpress.XtraEditors.SimpleButton btnPrintReport;
-<<<<<<< Updated upstream
         private System.ComponentModel.BackgroundWorker bwLoadData;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
-=======
         private System.ComponentModel.BackgroundWorker bwLoadProcurement;
-        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.ComponentModel.BackgroundWorker bwLoadBreakdown;
->>>>>>> Stashed changes
     }
 }

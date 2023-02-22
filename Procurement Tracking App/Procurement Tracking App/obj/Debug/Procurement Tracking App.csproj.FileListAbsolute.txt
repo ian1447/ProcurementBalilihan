@@ -100,3 +100,5 @@ D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App
 C:\Users\yanni\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.csprojResolveAssemblyReference.cache
 D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\bin\Debug\Procurement Tracking App.exe.config
 D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.ProcurementReport.resources
+C:\Users\yanni\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\bin\Debug\Procurement Tracking App.exe.config
+C:\Users\yanni\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.ProcurementReport.resources

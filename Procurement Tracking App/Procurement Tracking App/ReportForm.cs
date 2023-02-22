@@ -7,14 +7,9 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-<<<<<<< Updated upstream
-using Procurement_Tracking_App.Core;
-using Procurement_Tracking_App.Dal;
-=======
 using Procurement_Tracking_App.Dal;
 using Procurement_Tracking_App.Core;
 using DevExpress.XtraReports.UI;
->>>>>>> Stashed changes
 
 namespace Procurement_Tracking_App
 {
@@ -24,12 +19,8 @@ namespace Procurement_Tracking_App
         {
             InitializeComponent();
         }
-<<<<<<< Updated upstream
 
         #region
-=======
-        #region loading screen
->>>>>>> Stashed changes
         bool loadingIsAlreadyShowing = false;
         private void ShowLoading(string message)
         {
@@ -66,13 +57,6 @@ namespace Procurement_Tracking_App
         }
         #endregion
 
-<<<<<<< Updated upstream
-        private void ReportForm_Shown(object sender, EventArgs e)
-        {
-
-        }
-
-        int bwLoadDataMaxRetries = 0;
         private void LoadData()
         {
             if (!bwLoadData.IsBusy)
@@ -83,25 +67,12 @@ namespace Procurement_Tracking_App
             }
         }
 
-        DataTable proctable = new DataTable();
-        private void bwLoadData_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-            proctable = Purchase.GetPurchase();
-            bwLoadData.CancelAsync();
-        }
-
-        private void bwLoadData_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-
-        }
-=======
         DataTable PurchaseTable = new DataTable();
         //background worker
         private void bwLoadProcurement_DoWork(object sender, DoWorkEventArgs e)
         {
             PurchaseTable = Purchase.GetPurchase();
-            bwLoadProcurement.CancelAsync();
+            bwLoadData.CancelAsync();
         }
         public int bwLoadDataMaxRetries;
         private void bwLoadProcurement_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -115,7 +86,7 @@ namespace Procurement_Tracking_App
             else
             {
                 if (bwLoadDataMaxRetries > 0)
-                    bwLoadProcurement.RunWorkerAsync();
+                    bwLoadData.RunWorkerAsync();
                 else
                 {
                     HideLoading();
@@ -137,22 +108,14 @@ namespace Procurement_Tracking_App
             }
             catch { return false; }
         }
-        void load_data() {
 
-            if (!bwLoadProcurement.IsBusy)
-            {
-                bwLoadDataMaxRetries = PublicVariables.MaxRetries;
-                ShowLoading("Loading Data...");
-                bwLoadProcurement.RunWorkerAsync();
-            }
-        }
-        
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
             LoadBreakdown();
 
         }
-        private void LoadBreakdown() {
+        private void LoadBreakdown()
+        {
 
             if (!bwLoadBreakdown.IsBusy)
             {
@@ -163,10 +126,11 @@ namespace Procurement_Tracking_App
 
         private void ReportForm_Shown(object sender, EventArgs e)
         {
-            load_data();
+            LoadData();
             btnPrintReport.Enabled = false;
         }
         int rowselected = 0;
+
         private void dtReport_Click(object sender, EventArgs e)
         {
             if (SelectionPass())
@@ -200,9 +164,7 @@ namespace Procurement_Tracking_App
             {
                 MessageBox.Show(Purchase.GetPurchaseBreakdownErrorMessage);
             }
+
         }
-
-
->>>>>>> Stashed changes
     }
 }
