@@ -62,6 +62,16 @@ namespace Procurement_Tracking_App
         private void PurchaseForm_Shown(object sender, EventArgs e)
         {
             LoadData();
+            if (PublicVariables.UserPrivilege == "User")
+            {
+                btnEditPurchase.Enabled = false;
+                btnEditBreakdown.Enabled = false;
+                btnUpdatePurchase.Enabled = false;
+                btnadd.Enabled = false;
+                btnViewPur.Enabled = true;
+                btnViewBreak.Enabled = true;
+                btnadd.Enabled = false;
+            }
         }
 
         public int bwLoadDataMaxRetries;
@@ -93,9 +103,15 @@ namespace Procurement_Tracking_App
                 rownumber = PurchaseTable.Rows.Count.ToString();
                 prno = YearLabel + "-" + MonthLabel + " " + rownumber;
                 txtPrNo.Text = prno;
+                if (PublicVariables.UserPrivilege == "Admin")
+                    btnadd.Enabled = true;
+                else
+                    btnadd.Enabled = false;
                 btncancel.Enabled = false;
                 btnedit.Enabled = false;
                 btnupdate.Enabled = false;
+                btnViewBreak.Enabled = false;
+                btnViewPur.Enabled = false;
             }
             else
             {
@@ -166,17 +182,43 @@ namespace Procurement_Tracking_App
         {
             if (SelectionPass())
             {
-                var focusRowView = (DataRowView)gvPurchase.GetFocusedRow();
-                txtPrNo.Text = focusRowView.Row[1].ToString();
-                txtDescription.Text = focusRowView.Row[2].ToString();
-                cbEndUser.Text = focusRowView.Row[3].ToString();
-                cbmode.Text = focusRowView.Row[4].ToString();
-                txtabc.Text = focusRowView.Row[5].ToString();
-                txtPrNo.Enabled = false;
-                btnadd.Enabled = false;
-                btncancel.Enabled = true;
-                btnedit.Enabled = true;
-                btnupdate.Enabled = true;
+                if (PublicVariables.UserPrivilege == "Admin")
+                {
+                    var focusRowView = (DataRowView)gvPurchase.GetFocusedRow();
+                    txtPrNo.Text = focusRowView.Row[1].ToString();
+                    txtDescription.Text = focusRowView.Row[2].ToString();
+                    cbEndUser.Text = focusRowView.Row[3].ToString();
+                    cbmode.Text = focusRowView.Row[4].ToString();
+                    txtabc.Text = focusRowView.Row[5].ToString();
+                    txtPrNo.Enabled = false;
+                    btnadd.Enabled = false;
+                    btncancel.Enabled = true;
+                    btnedit.Enabled = true;
+                    btnupdate.Enabled = true;
+                    btnViewBreak.Enabled = true;
+                    btnViewPur.Enabled = true;
+                }
+                else
+                {
+                    var focusRowView = (DataRowView)gvPurchase.GetFocusedRow();
+                    txtPrNo.Text = focusRowView.Row[1].ToString();
+                    txtDescription.Text = focusRowView.Row[2].ToString();
+                    cbEndUser.Text = focusRowView.Row[3].ToString();
+                    cbmode.Text = focusRowView.Row[4].ToString();
+                    txtabc.Text = focusRowView.Row[5].ToString();
+                    txtPrNo.Enabled = false;
+                    txtDescription.Enabled = false;
+                    cbEndUser.Enabled = false;
+                    cbmode.Enabled = false;
+                    txtabc.Enabled = false;
+                    btnadd.Enabled = false;
+                    btncancel.Enabled = true;
+                    btnedit.Enabled = false;
+                    btnupdate.Enabled = false;
+                    btnViewBreak.Enabled = true;
+                    btnViewPur.Enabled = true;
+                }
+                
             }
             else
                 MessageBox.Show("No Row Selected.");
@@ -184,6 +226,10 @@ namespace Procurement_Tracking_App
 
         private void btncancel_Click(object sender, EventArgs e)
         {
+            if (PublicVariables.UserPrivilege == "Admin")
+                btnadd.Enabled = true;
+            else
+                btnadd.Enabled = false;
             txtPrNo.Text = "";
             txtDescription.Text = "";
             cbEndUser.SelectedIndex = 1;
@@ -191,10 +237,11 @@ namespace Procurement_Tracking_App
             cbmode.Text = "";
             txtabc.Text = "";
             txtPrNo.Enabled = true;
-            btnadd.Enabled = true;
             btncancel.Enabled = false;
             btnedit.Enabled = false;
             btnupdate.Enabled = false;
+            btnViewBreak.Enabled = false;
+            btnViewPur.Enabled = false;
             string YearLabel = DateTime.Now.Year.ToString();
             string MonthLabel = DateTime.Now.Month.ToString();
             rownumber = PurchaseTable.Rows.Count.ToString();
@@ -376,6 +423,59 @@ namespace Procurement_Tracking_App
                 up.ShowDialog();
                 btncancel.PerformClick();
                 btnRefresh.PerformClick();
+            }
+            else
+                MessageBox.Show("No Row Selected.");
+        }
+
+        private void btnViewPur_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                var focusRowView = (DataRowView)gvPurchase.GetFocusedRow();
+                UpdatePurchase up = new UpdatePurchase();
+                up.IsViewing = true;
+                up.lblPrNo.Text = focusRowView.Row[1].ToString();
+                up.txtprno.Text = focusRowView.Row[1].ToString();
+                up.medesc.Text = focusRowView.Row[2].ToString();
+                up.txtenduser.Text = focusRowView.Row[3].ToString();
+                up.memode.Text = focusRowView.Row[4].ToString();
+                up.txtabc.Text = focusRowView.Row[5].ToString();
+                if (focusRowView.Row[6].ToString() != "")
+                    up.lblOpening.Text = Convert.ToDateTime(focusRowView.Row[6]).ToString("MM/dd/yyyy");
+                if (focusRowView.Row[7].ToString() != "")
+                    up.lblPreProc.Text = Convert.ToDateTime(focusRowView.Row[7]).ToString("MM/dd/yyyy");
+                if (focusRowView.Row[8].ToString() != "")
+                    up.lblPosting.Text = Convert.ToDateTime(focusRowView.Row[8]).ToString("MM/dd/yyyy");
+                if (focusRowView.Row[9].ToString() != "")
+                    up.lblPreBid.Text = Convert.ToDateTime(focusRowView.Row[9]).ToString("MM/dd/yyyy");
+                if (focusRowView.Row[10].ToString() != "")
+                    up.lblBidEval.Text = Convert.ToDateTime(focusRowView.Row[10]).ToString("MM/dd/yyyy");
+                if (focusRowView.Row[11].ToString() != "")
+                    up.lblAward.Text = Convert.ToDateTime(focusRowView.Row[11]).ToString("MM/dd/yyyy");
+                if (focusRowView.Row[12].ToString() != "")
+                    up.lblPO.Text = Convert.ToDateTime(focusRowView.Row[12]).ToString("MM/dd/yyyy");
+                if (focusRowView.Row[13].ToString() != "")
+                    up.lblNTP.Text = Convert.ToDateTime(focusRowView.Row[13]).ToString("MM/dd/yyyy");
+                if (focusRowView.Row[14].ToString() != "")
+                    up.lblDelivery.Text = Convert.ToDateTime(focusRowView.Row[14]).ToString("MM/dd/yyyy");
+                up.ShowDialog();
+                btncancel.PerformClick();
+                btnRefresh.PerformClick();
+            }
+            else
+                MessageBox.Show("No Row Selected.");
+        }
+
+        private void btnViewBreak_Click(object sender, EventArgs e)
+        {
+            if (SelectionPass())
+            {
+                var focusRowView = (DataRowView)gvPurchase.GetFocusedRow();
+                Breakdown b = new Breakdown();
+                b.view = true;
+                b.lblPrNo.Text = focusRowView.Row[1].ToString();
+                b.ShowDialog();
             }
             else
                 MessageBox.Show("No Row Selected.");

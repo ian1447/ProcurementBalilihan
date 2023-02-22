@@ -61,7 +61,6 @@ namespace Procurement_Tracking_App
         private void ProcurementTrackingForm_Shown(object sender, EventArgs e)
         {
             LoadData();
-
         }
 
         private void LoadData()
@@ -87,6 +86,8 @@ namespace Procurement_Tracking_App
             {
                 HideLoading();
                 dtPurchase.DataSource = proctable;
+                if (PublicVariables.UserPrivilege == "User")
+                    btnupdate.Enabled = false;
             }
             else
             {
@@ -222,8 +223,5 @@ namespace Procurement_Tracking_App
             }
             catch { }
         }
-
-
-
     }
 }

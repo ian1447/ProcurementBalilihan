@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.dtReport = new DevExpress.XtraGrid.GridControl();
             this.gvReport = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,6 +49,8 @@
             this.delivery = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMarqueeProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
+            this.bwLoadData = new System.ComponentModel.BackgroundWorker();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.dtReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -62,16 +63,14 @@
             this.dtReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtReport.Location = new System.Drawing.Point(2, 14);
+            this.dtReport.Location = new System.Drawing.Point(1, 10);
             this.dtReport.MainView = this.gvReport;
-            this.dtReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtReport.Name = "dtReport";
             this.dtReport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMemoEdit1,
             this.repositoryItemMarqueeProgressBar1,
             this.repositoryItemMemoEdit2});
-            this.dtReport.Size = new System.Drawing.Size(1172, 616);
+            this.dtReport.Size = new System.Drawing.Size(781, 421);
             this.dtReport.TabIndex = 2;
             this.dtReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvReport});
@@ -332,24 +331,28 @@
             // btnPrintReport
             // 
             this.btnPrintReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrintReport.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintReport.Image")));
-            this.btnPrintReport.Location = new System.Drawing.Point(909, 640);
-            this.btnPrintReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPrintReport.Location = new System.Drawing.Point(606, 438);
             this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(265, 62);
+            this.btnPrintReport.Size = new System.Drawing.Size(177, 42);
             this.btnPrintReport.TabIndex = 20;
             this.btnPrintReport.Text = "Print";
             // 
+            // bwLoadData
+            // 
+            this.bwLoadData.WorkerSupportsCancellation = true;
+            this.bwLoadData.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadData_DoWork);
+            this.bwLoadData.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadData_RunWorkerCompleted);
+            // 
             // ReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1187, 714);
+            this.ClientSize = new System.Drawing.Size(791, 489);
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.dtReport);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReportForm";
             this.Text = "ReportForm";
+            this.Shown += new System.EventHandler(this.ReportForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dtReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
@@ -382,5 +385,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn delivery;
         private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar repositoryItemMarqueeProgressBar1;
         private DevExpress.XtraEditors.SimpleButton btnPrintReport;
+        private System.ComponentModel.BackgroundWorker bwLoadData;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
