@@ -18,6 +18,11 @@ namespace Procurement_Tracking_App
         {
             InitializeComponent();
             this.Text = PublicVariables.ProjectName;
+            if (PublicVariables.UserPrivilege == "User")
+            {
+                btnusermanagement.Enabled = false;
+                btnusermanagement.Visibility = BarItemVisibility.Never;
+            }
         }
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {

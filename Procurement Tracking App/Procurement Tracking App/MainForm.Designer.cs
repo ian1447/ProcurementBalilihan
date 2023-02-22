@@ -181,6 +181,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(898, 533);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
