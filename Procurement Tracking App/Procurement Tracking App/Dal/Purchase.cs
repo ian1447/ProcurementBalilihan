@@ -37,6 +37,29 @@ namespace Procurement_Tracking_App.Dal
                 catch (Exception ex) { GetPurchaseIsGood = false; GetPurchaseErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Get"; return null; }
             }
         }
+        public static bool GetPurchasReporteIsGood = false;
+        public static string GetPurchaseReportErrorMessage;
+        public static DataTable GetPurchaseReport(DateTime _date_from, DateTime _date_to)
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+            {
+                try
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_procurement_report", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new MySqlParameter("_date_from", _date_from));
+                    cmd.Parameters.Add(new MySqlParameter("_date_to", _date_to));
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    GetPurchasReporteIsGood = true;
+                    return dt;
+                }
+                catch (Exception ex) { GetPurchasReporteIsGood = false; GetPurchaseReportErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Get Reports"; return null; }
+            }
+        }
 
         public static bool GetPurchaseBreakdownIsGood = false;
         public static string GetPurchaseBreakdownErrorMessage;

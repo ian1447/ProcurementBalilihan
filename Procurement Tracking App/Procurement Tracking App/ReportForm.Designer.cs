@@ -54,11 +54,27 @@
             this.bwLoadData = new System.ComponentModel.BackgroundWorker();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
             this.bwLoadBreakdown = new System.ComponentModel.BackgroundWorker();
+            this.pnlDates = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.dtpTo = new DevExpress.XtraEditors.DateEdit();
+            this.dtpFrom = new DevExpress.XtraEditors.DateEdit();
+            this.cmbDateSpan = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlDates)).BeginInit();
+            this.pnlDates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDateSpan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtReport
@@ -66,18 +82,19 @@
             this.dtReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             gridLevelNode1.RelationName = "Level1";
             this.dtReport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.dtReport.Location = new System.Drawing.Point(12, 12);
+            this.dtReport.Location = new System.Drawing.Point(13, 84);
             this.dtReport.MainView = this.gvReport;
+            this.dtReport.Margin = new System.Windows.Forms.Padding(4);
             this.dtReport.Name = "dtReport";
             this.dtReport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMemoEdit1,
             this.repositoryItemMarqueeProgressBar1,
             this.repositoryItemMemoEdit2});
-            this.dtReport.Size = new System.Drawing.Size(1018, 482);
+            this.dtReport.Size = new System.Drawing.Size(1527, 704);
             this.dtReport.TabIndex = 2;
             this.dtReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvReport});
@@ -338,11 +355,12 @@
             // 
             // btnPrintReport
             // 
-            this.btnPrintReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrintReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintReport.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintReport.Image")));
-            this.btnPrintReport.Location = new System.Drawing.Point(853, 497);
+            this.btnPrintReport.Location = new System.Drawing.Point(1274, 15);
+            this.btnPrintReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(177, 42);
+            this.btnPrintReport.Size = new System.Drawing.Size(266, 61);
             this.btnPrintReport.TabIndex = 20;
             this.btnPrintReport.Text = "Print";
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
@@ -359,22 +377,152 @@
             this.bwLoadBreakdown.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadBreakdown_DoWork);
             this.bwLoadBreakdown.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadBreakdown_RunWorkerCompleted);
             // 
+            // pnlDates
+            // 
+            this.pnlDates.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDates.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.pnlDates.Appearance.Options.UseBackColor = true;
+            this.pnlDates.Appearance.Options.UseFont = true;
+            this.pnlDates.Controls.Add(this.labelControl8);
+            this.pnlDates.Controls.Add(this.btnSearch);
+            this.pnlDates.Controls.Add(this.labelControl6);
+            this.pnlDates.Controls.Add(this.dtpTo);
+            this.pnlDates.Controls.Add(this.dtpFrom);
+            this.pnlDates.Location = new System.Drawing.Point(309, 4);
+            this.pnlDates.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlDates.Name = "pnlDates";
+            this.pnlDates.Size = new System.Drawing.Size(627, 82);
+            this.pnlDates.TabIndex = 382;
+            this.pnlDates.Visible = false;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Location = new System.Drawing.Point(22, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(44, 21);
+            this.labelControl8.TabIndex = 370;
+            this.labelControl8.Text = "From :";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Appearance.Options.UseFont = true;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(490, 32);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(112, 39);
+            this.btnSearch.TabIndex = 365;
+            this.btnSearch.Text = "Load";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Location = new System.Drawing.Point(256, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(24, 21);
+            this.labelControl6.TabIndex = 369;
+            this.labelControl6.Text = "To :";
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.EditValue = null;
+            this.dtpTo.Location = new System.Drawing.Point(256, 34);
+            this.dtpTo.Margin = new System.Windows.Forms.Padding(6);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.dtpTo.Properties.Appearance.Options.UseFont = true;
+            this.dtpTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpTo.Properties.DisplayFormat.FormatString = "MMM. dd, yyyy";
+            this.dtpTo.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpTo.Properties.EditFormat.FormatString = "MMM. dd, yyyy";
+            this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpTo.Properties.Mask.EditMask = "MMM. dd, yyyy";
+            this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dtpTo.Size = new System.Drawing.Size(222, 34);
+            this.dtpTo.TabIndex = 364;
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.EditValue = null;
+            this.dtpFrom.Location = new System.Drawing.Point(22, 34);
+            this.dtpFrom.Margin = new System.Windows.Forms.Padding(6);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.dtpFrom.Properties.Appearance.Options.UseFont = true;
+            this.dtpFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpFrom.Properties.DisplayFormat.FormatString = "MMM. dd, yyyy";
+            this.dtpFrom.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpFrom.Properties.EditFormat.FormatString = "MMM. dd, yyyy";
+            this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpFrom.Properties.Mask.EditMask = "MMM. dd, yyyy";
+            this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dtpFrom.Size = new System.Drawing.Size(222, 34);
+            this.dtpFrom.TabIndex = 362;
+            // 
+            // cmbDateSpan
+            // 
+            this.cmbDateSpan.EditValue = "-- Select Period --";
+            this.cmbDateSpan.Location = new System.Drawing.Point(15, 42);
+            this.cmbDateSpan.Margin = new System.Windows.Forms.Padding(6);
+            this.cmbDateSpan.Name = "cmbDateSpan";
+            this.cmbDateSpan.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
+            this.cmbDateSpan.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cmbDateSpan.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbDateSpan.Properties.Appearance.Options.UseFont = true;
+            this.cmbDateSpan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbDateSpan.Properties.NullText = "-- Select Period --";
+            this.cmbDateSpan.Properties.View = this.gridView1;
+            this.cmbDateSpan.Size = new System.Drawing.Size(284, 34);
+            this.cmbDateSpan.TabIndex = 381;
+            this.cmbDateSpan.EditValueChanged += new System.EventHandler(this.cmbDateSpan_EditValueChanged);
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
             // ReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 548);
+            this.ClientSize = new System.Drawing.Size(1557, 801);
+            this.Controls.Add(this.pnlDates);
+            this.Controls.Add(this.cmbDateSpan);
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.dtReport);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ReportForm";
             this.Text = "Report Form";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             this.Shown += new System.EventHandler(this.ReportForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dtReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMarqueeProgressBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlDates)).EndInit();
+            this.pnlDates.ResumeLayout(false);
+            this.pnlDates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDateSpan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -406,5 +554,13 @@
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.ComponentModel.BackgroundWorker bwLoadProcurement;
         private System.ComponentModel.BackgroundWorker bwLoadBreakdown;
+        private DevExpress.XtraEditors.PanelControl pnlDates;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.DateEdit dtpTo;
+        private DevExpress.XtraEditors.DateEdit dtpFrom;
+        private DevExpress.XtraEditors.SearchLookUpEdit cmbDateSpan;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
