@@ -133,13 +133,13 @@ namespace Procurement_Tracking_App
             LoadData();
             btnPrintReport.Enabled = false;
         }
-        int rowselected = 0;
+        string rowselected;
 
         private void dtReport_Click(object sender, EventArgs e)
         {
             if (SelectionPass())
             {
-                rowselected = Convert.ToInt32(gvReport.GetRowCellValue(gvReport.FocusedRowHandle, "po_no"));
+                rowselected = (gvReport.GetRowCellValue(gvReport.FocusedRowHandle, "po_no")).ToString();
                 btnPrintReport.Enabled = true;
             }
         }

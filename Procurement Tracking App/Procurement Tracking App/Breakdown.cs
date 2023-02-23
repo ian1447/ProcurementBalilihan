@@ -73,8 +73,8 @@ namespace Procurement_Tracking_App
             txtunit.Text = "";
             txtunitcost.Text = "";
             medescription.Text = "";
-            cbSupplier.SelectedIndex = 1;
-            cbSupplier.SelectedValue = 1;
+            cbSupplier.SelectedIndex = 0;
+            cbSupplier.SelectedValue = 0;
         }
 
         private void LoadData()

@@ -36,12 +36,9 @@ CREATE TABLE `purchase` (
   `po` datetime DEFAULT NULL,
   `ntp` datetime DEFAULT NULL,
   `delivery` datetime DEFAULT NULL,
+  `transdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
-
-/*Data for the table `purchase` */
-
-insert  into `purchase`(`id`,`po_no`,`description`,`end_user`,`mode_of_pr`,`abc`,`opening_of_bids`,`preproc`,`posting`,`prebid`,`detailed_bid_evaluation`,`award`,`po`,`ntp`,`delivery`) values (4,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-01','2023-02-02 00:00:00','2023-02-03 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-28 00:00:00'),(5,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-01','2023-02-02 00:00:00','2023-02-03 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-28 00:00:00'),(6,'1232','43','IRENE G. MAGLAHOS','PUBLIC BIDDING',23,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,'234','23','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT (SVP)',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,'23232','123wala lang ahkds jahsdh f','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(9,'123','343adgfdfbxcvbsdgetywterysdfgh','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-01','2023-02-02 00:00:00','2023-02-03 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-04 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-28 00:00:00'),(10,'sd','23','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(11,'asd','qwe','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT (SVP)',123,'2023-03-22',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(12,'32','32','DR. JOCELYN P. LUMACTUD','NEGOTIATED PROCUREMENT (SVP)',12,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(13,'78','786','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',78,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(14,'45','345','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',345,'2023-02-15',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(15,'23','123123','DR. DHOREE MAY R. MARAVILLA','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(16,'123343','231','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT (SVP)',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(17,'23234234','243','DR. JOCELYN P. LUMACTUD','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(18,'123123123','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(19,'342','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',1234345,NULL,NULL,'2023-02-15 00:00:00',NULL,NULL,NULL,NULL,NULL,NULL),(20,'31','123','IRENE G. MAGLAHOS','NEGOTIATED PROCUREMENT (SVP)',123,'2023-02-15','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00','2023-02-15 00:00:00'),(21,'123qwe','123','MARC BENIGNO C. OLAGUIR','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',123,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(22,'asdzxc','asd','DR. EVANGIELYN P. LUMANTAS','NEGOTIATED PROCUREMENT UNDER EMERGENCY CASES',212,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 /*Table structure for table `purchase_breakdown` */
 
@@ -58,11 +55,7 @@ CREATE TABLE `purchase_breakdown` (
   `total_cost` int(11) DEFAULT NULL,
   `supplier` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
-
-/*Data for the table `purchase_breakdown` */
-
-insert  into `purchase_breakdown`(`id`,`po_no`,`property_no`,`unit`,`description`,`unit_cost`,`quantity`,`total_cost`,`supplier`) values (1,NULL,'34','Mouse','wala',123,123,15129,'Alturas Mall'),(2,'23234234','123','3123','123',2,123,246,'Alturas Mall'),(3,'123123123','23123','123','sdf',435,23,10005,'try2'),(4,'123123123','454','345','345345345345erfgsdfgsdfg',345,345,119025,'try'),(5,'342','453','132','342',211,234,49374,'Alturas Mall'),(6,'31','3422','234','234',234,234,54756,'try2'),(7,'31','213','123','wdf',123,123,15129,'try'),(8,'asdzxc','1234qwe','asdasd','asdasd',123,12,1476,'try'),(10,'31','sghr','ertsefg','wertsdfgwer',3452345,234,807848730,'Alturas Mall');
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 /*Table structure for table `suppliers` */
 
@@ -73,11 +66,7 @@ CREATE TABLE `suppliers` (
   `name` varchar(255) DEFAULT NULL,
   `address` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
-/*Data for the table `suppliers` */
-
-insert  into `suppliers`(`id`,`name`,`address`) values (1,'try','try lang gd'),(2,'kitt','dasdasdas'),(3,'Alturas Mall','Tagbilaran'),(4,'ICM','Dao Tagbilaran City');
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 /*Table structure for table `users` */
 
@@ -90,11 +79,22 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `privilege` enum('Admin','User') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
-/*Data for the table `users` */
+/* Procedure structure for procedure `sp_procurement_report` */
 
-insert  into `users`(`id`,`name`,`username`,`password`,`privilege`) values (1,'admin','admin','*4ACFE3202A5FF5CF467898FC58AAB1D615029441','Admin'),(2,'kitt','kitt','123','User');
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_procurement_report` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_procurement_report`(
+    IN _date_from date,
+    in _date_to date
+    )
+BEGIN
+	select * from `purchase` where date(transdate) between date(_date_from) and date(_date_to) order by transdate desc; 
+    END */$$
+DELIMITER ;
 
 /* Procedure structure for procedure `sp_purchase_add` */
 
@@ -161,7 +161,7 @@ DELIMITER $$
 	in _po_no varchar(255)
     )
 BEGIN
-	select * from `purchase_breakdown` where po_no = _po_no;
+	select pb.* from `purchase_breakdown` pb where pb.po_no = _po_no;
     END */$$
 DELIMITER ;
 
@@ -215,7 +215,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_purchase_update`(
+/*!50003 CREATE DEFINER=`system_admin`@`%` PROCEDURE `sp_purchase_update`(
 	in _date datetime,
 	IN _po_no VARCHAR (255),
 	in _status varchar (255)
