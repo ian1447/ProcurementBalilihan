@@ -49,6 +49,7 @@
             this.po = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ntp = new DevExpress.XtraGrid.Columns.GridColumn();
             this.delivery = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.transdate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemMarqueeProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
             this.bwLoadData = new System.ComponentModel.BackgroundWorker();
@@ -62,6 +63,7 @@
             this.dtpFrom = new DevExpress.XtraEditors.DateEdit();
             this.cmbDateSpan = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnproreport = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -123,7 +125,8 @@
             this.award,
             this.po,
             this.ntp,
-            this.delivery});
+            this.delivery,
+            this.transdate});
             this.gvReport.GridControl = this.dtReport;
             this.gvReport.Name = "gvReport";
             this.gvReport.OptionsBehavior.Editable = false;
@@ -349,6 +352,14 @@
             this.delivery.Visible = true;
             this.delivery.VisibleIndex = 13;
             // 
+            // transdate
+            // 
+            this.transdate.Caption = "Transdate";
+            this.transdate.FieldName = "transdate";
+            this.transdate.Name = "transdate";
+            this.transdate.Visible = true;
+            this.transdate.VisibleIndex = 14;
+            // 
             // repositoryItemMarqueeProgressBar1
             // 
             this.repositoryItemMarqueeProgressBar1.Name = "repositoryItemMarqueeProgressBar1";
@@ -357,12 +368,12 @@
             // 
             this.btnPrintReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintReport.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintReport.Image")));
-            this.btnPrintReport.Location = new System.Drawing.Point(1274, 15);
+            this.btnPrintReport.Location = new System.Drawing.Point(1337, 15);
             this.btnPrintReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(266, 61);
+            this.btnPrintReport.Size = new System.Drawing.Size(203, 61);
             this.btnPrintReport.TabIndex = 20;
-            this.btnPrintReport.Text = "Print";
+            this.btnPrintReport.Text = "Print PR Breakdown";
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
             // 
             // bwLoadData
@@ -495,11 +506,24 @@
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // btnproreport
+            // 
+            this.btnproreport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnproreport.Image = ((System.Drawing.Image)(resources.GetObject("btnproreport.Image")));
+            this.btnproreport.Location = new System.Drawing.Point(1126, 15);
+            this.btnproreport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnproreport.Name = "btnproreport";
+            this.btnproreport.Size = new System.Drawing.Size(203, 61);
+            this.btnproreport.TabIndex = 383;
+            this.btnproreport.Text = "Print PR Report";
+            this.btnproreport.Click += new System.EventHandler(this.btnproreport_Click);
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1557, 801);
+            this.Controls.Add(this.btnproreport);
             this.Controls.Add(this.pnlDates);
             this.Controls.Add(this.cmbDateSpan);
             this.Controls.Add(this.btnPrintReport);
@@ -562,5 +586,7 @@
         private DevExpress.XtraEditors.DateEdit dtpFrom;
         private DevExpress.XtraEditors.SearchLookUpEdit cmbDateSpan;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn transdate;
+        private DevExpress.XtraEditors.SimpleButton btnproreport;
     }
 }

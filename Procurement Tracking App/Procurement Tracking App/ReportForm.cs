@@ -82,6 +82,7 @@ namespace Procurement_Tracking_App
             {
                 HideLoading();
                 dtReport.DataSource = PurchaseTable;
+                btnPrintReport.Enabled = false;
             }
             else
             {
@@ -131,7 +132,7 @@ namespace Procurement_Tracking_App
             cmbDateSpan.Properties.ValueMember = "Period";
             cmbDateSpan.EditValue = "This Month's Record";
             LoadData();
-            btnPrintReport.Enabled = false;
+    
         }
         string rowselected;
 
@@ -207,6 +208,15 @@ namespace Procurement_Tracking_App
                 dateTo = Convert.ToDateTime(dtpFrom.EditValue).AddMonths(1).AddSeconds(-1);
                 LoadData();
             }
+            else if (cmbDateSpan.Text.Equals("This Year's Records"))
+            {
+                dtpFrom.EditValue = "01-01-" + DateTime.Now.Year;
+                dtpTo.EditValue = "12-31-" + DateTime.Now.Year;
+
+                dateFrom = Convert.ToDateTime(dtpFrom.EditValue);
+                dateTo = Convert.ToDateTime(dtpFrom.EditValue);
+                LoadData();
+            }
             else if (cmbDateSpan.Text.Equals("All Records"))
             {
                 dtpFrom.EditValue = baseDate.AddYears(-100);
@@ -233,6 +243,7 @@ namespace Procurement_Tracking_App
             dataPeriod.Rows.Add("Today's Record");
             dataPeriod.Rows.Add("This Week's Record");
             dataPeriod.Rows.Add("This Month's Record");
+            dataPeriod.Rows.Add("This Year's Records");
             dataPeriod.Rows.Add("All Records");
             dataPeriod.Rows.Add("Pick a date..");
         }
@@ -243,6 +254,23 @@ namespace Procurement_Tracking_App
             dateTo = Convert.ToDateTime(dtpTo.EditValue);
             LoadData();
             pnlDates.Visible = false;
+        }
+
+        private void btnproreport_Click(object sender, EventArgs e)
+        {
+            YearlyReport yr = new YearlyReport();
+            if (dateFrom.Year.ToString() == dateTo.Year.ToString())
+            {
+                yr.lblTitleYear.Text = "PROCUREMENT STATUS " + dateFrom.Year.ToString();
+            }
+            else
+            {
+                yr.lblTitleYear.Text = "PROCUREMENT STATUS " + dateFrom.Year.ToString() + " - " + dateTo.Year.ToString();
+            }
+            
+            yr.DataSource = PurchaseTable;
+            yr.DataMember = "CustomSQLQuery1";
+            yr.ShowPreviewDialog();
         }
     }
 }
