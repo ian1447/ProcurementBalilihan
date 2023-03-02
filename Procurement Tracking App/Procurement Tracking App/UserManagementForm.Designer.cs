@@ -103,7 +103,7 @@
             this.gcUserInfo.Controls.Add(this.txtName);
             this.gcUserInfo.Enabled = false;
             this.gcUserInfo.Location = new System.Drawing.Point(575, 9);
-            this.gcUserInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gcUserInfo.Margin = new System.Windows.Forms.Padding(2);
             this.gcUserInfo.Name = "gcUserInfo";
             this.gcUserInfo.Size = new System.Drawing.Size(317, 387);
             this.gcUserInfo.TabIndex = 7;
@@ -129,7 +129,7 @@
             "Admin",
             "User"});
             this.cmbpriv.Location = new System.Drawing.Point(11, 284);
-            this.cmbpriv.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cmbpriv.Margin = new System.Windows.Forms.Padding(5);
             this.cmbpriv.Name = "cmbpriv";
             this.cmbpriv.Size = new System.Drawing.Size(295, 27);
             this.cmbpriv.TabIndex = 17;
@@ -285,7 +285,7 @@
             this.name.AppearanceHeader.Options.UseTextOptions = true;
             this.name.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.name.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.name.Caption = "Supplier Name";
+            this.name.Caption = "User Name";
             this.name.FieldName = "name";
             this.name.Name = "name";
             this.name.Visible = true;
@@ -299,7 +299,7 @@
             this.username.AppearanceHeader.Options.UseTextOptions = true;
             this.username.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.username.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.username.Caption = "username";
+            this.username.Caption = "Username";
             this.username.FieldName = "username";
             this.username.Name = "username";
             this.username.Visible = true;
@@ -307,7 +307,10 @@
             // 
             // privilege
             // 
-            this.privilege.Caption = "privilege";
+            this.privilege.AppearanceHeader.Options.UseTextOptions = true;
+            this.privilege.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.privilege.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.privilege.Caption = "Privilege";
             this.privilege.FieldName = "privilege";
             this.privilege.Name = "privilege";
             this.privilege.Visible = true;
@@ -325,7 +328,7 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.lblnousers.Location = new System.Drawing.Point(211, 144);
-            this.lblnousers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblnousers.Margin = new System.Windows.Forms.Padding(2);
             this.lblnousers.Name = "lblnousers";
             this.lblnousers.Size = new System.Drawing.Size(151, 13);
             this.lblnousers.TabIndex = 18;
