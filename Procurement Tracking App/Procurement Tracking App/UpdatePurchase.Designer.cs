@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePurchase));
             this.lblPrNo = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.gc = new DevExpress.XtraEditors.GroupControl();
+            this.gcDetails = new DevExpress.XtraEditors.GroupControl();
             this.dtpDate = new DevExpress.XtraEditors.DateEdit();
             this.memode = new DevExpress.XtraEditors.MemoEdit();
             this.medesc = new DevExpress.XtraEditors.MemoEdit();
@@ -70,8 +70,8 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.bwUpdateStatus = new System.ComponentModel.BackgroundWorker();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Procurement_Tracking_App.WaitForm1), true, true);
-            ((System.ComponentModel.ISupportInitialize)(this.gc)).BeginInit();
-            this.gc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDetails)).BeginInit();
+            this.gcDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memode.Properties)).BeginInit();
@@ -112,54 +112,54 @@
             this.labelControl7.TabIndex = 24;
             this.labelControl7.Text = "Pr No.";
             // 
-            // gc
+            // gcDetails
             // 
-            this.gc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.gcDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.gc.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gc.AppearanceCaption.Options.UseFont = true;
-            this.gc.AppearanceCaption.Options.UseTextOptions = true;
-            this.gc.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gc.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gc.Controls.Add(this.dtpDate);
-            this.gc.Controls.Add(this.memode);
-            this.gc.Controls.Add(this.medesc);
-            this.gc.Controls.Add(this.cbStatus);
-            this.gc.Controls.Add(this.labelControl28);
-            this.gc.Controls.Add(this.lblDelivery);
-            this.gc.Controls.Add(this.labelControl27);
-            this.gc.Controls.Add(this.lblNTP);
-            this.gc.Controls.Add(this.labelControl25);
-            this.gc.Controls.Add(this.lblPO);
-            this.gc.Controls.Add(this.labelControl23);
-            this.gc.Controls.Add(this.lblAward);
-            this.gc.Controls.Add(this.labelControl21);
-            this.gc.Controls.Add(this.lblBidEval);
-            this.gc.Controls.Add(this.labelControl19);
-            this.gc.Controls.Add(this.lblPreBid);
-            this.gc.Controls.Add(this.labelControl17);
-            this.gc.Controls.Add(this.lblPosting);
-            this.gc.Controls.Add(this.labelControl15);
-            this.gc.Controls.Add(this.lblPreProc);
-            this.gc.Controls.Add(this.labelControl13);
-            this.gc.Controls.Add(this.lblOpening);
-            this.gc.Controls.Add(this.labelControl11);
-            this.gc.Controls.Add(this.labelControl8);
-            this.gc.Controls.Add(this.labelControl9);
-            this.gc.Controls.Add(this.labelControl6);
-            this.gc.Controls.Add(this.txtabc);
-            this.gc.Controls.Add(this.labelControl5);
-            this.gc.Controls.Add(this.labelControl4);
-            this.gc.Controls.Add(this.txtenduser);
-            this.gc.Controls.Add(this.labelControl3);
-            this.gc.Controls.Add(this.labelControl2);
-            this.gc.Controls.Add(this.txtprno);
-            this.gc.Controls.Add(this.labelControl1);
-            this.gc.Location = new System.Drawing.Point(12, 82);
-            this.gc.Name = "gc";
-            this.gc.Size = new System.Drawing.Size(448, 640);
-            this.gc.TabIndex = 26;
-            this.gc.Text = "Procurement Details";
+            this.gcDetails.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gcDetails.AppearanceCaption.Options.UseFont = true;
+            this.gcDetails.AppearanceCaption.Options.UseTextOptions = true;
+            this.gcDetails.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gcDetails.AppearanceCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gcDetails.Controls.Add(this.dtpDate);
+            this.gcDetails.Controls.Add(this.memode);
+            this.gcDetails.Controls.Add(this.medesc);
+            this.gcDetails.Controls.Add(this.cbStatus);
+            this.gcDetails.Controls.Add(this.labelControl28);
+            this.gcDetails.Controls.Add(this.lblDelivery);
+            this.gcDetails.Controls.Add(this.labelControl27);
+            this.gcDetails.Controls.Add(this.lblNTP);
+            this.gcDetails.Controls.Add(this.labelControl25);
+            this.gcDetails.Controls.Add(this.lblPO);
+            this.gcDetails.Controls.Add(this.labelControl23);
+            this.gcDetails.Controls.Add(this.lblAward);
+            this.gcDetails.Controls.Add(this.labelControl21);
+            this.gcDetails.Controls.Add(this.lblBidEval);
+            this.gcDetails.Controls.Add(this.labelControl19);
+            this.gcDetails.Controls.Add(this.lblPreBid);
+            this.gcDetails.Controls.Add(this.labelControl17);
+            this.gcDetails.Controls.Add(this.lblPosting);
+            this.gcDetails.Controls.Add(this.labelControl15);
+            this.gcDetails.Controls.Add(this.lblPreProc);
+            this.gcDetails.Controls.Add(this.labelControl13);
+            this.gcDetails.Controls.Add(this.lblOpening);
+            this.gcDetails.Controls.Add(this.labelControl11);
+            this.gcDetails.Controls.Add(this.labelControl8);
+            this.gcDetails.Controls.Add(this.labelControl9);
+            this.gcDetails.Controls.Add(this.labelControl6);
+            this.gcDetails.Controls.Add(this.txtabc);
+            this.gcDetails.Controls.Add(this.labelControl5);
+            this.gcDetails.Controls.Add(this.labelControl4);
+            this.gcDetails.Controls.Add(this.txtenduser);
+            this.gcDetails.Controls.Add(this.labelControl3);
+            this.gcDetails.Controls.Add(this.labelControl2);
+            this.gcDetails.Controls.Add(this.txtprno);
+            this.gcDetails.Controls.Add(this.labelControl1);
+            this.gcDetails.Location = new System.Drawing.Point(12, 82);
+            this.gcDetails.Name = "gcDetails";
+            this.gcDetails.Size = new System.Drawing.Size(448, 640);
+            this.gcDetails.TabIndex = 26;
+            this.gcDetails.Text = "Procurement Details";
             // 
             // dtpDate
             // 
@@ -677,7 +677,7 @@
             this.ClientSize = new System.Drawing.Size(469, 782);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.gc);
+            this.Controls.Add(this.gcDetails);
             this.Controls.Add(this.lblPrNo);
             this.Controls.Add(this.labelControl7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -685,9 +685,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UpdatePurchase";
             this.Shown += new System.EventHandler(this.UpdatePurchase_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.gc)).EndInit();
-            this.gc.ResumeLayout(false);
-            this.gc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDetails)).EndInit();
+            this.gcDetails.ResumeLayout(false);
+            this.gcDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memode.Properties)).EndInit();
@@ -703,7 +703,7 @@
 
         public DevExpress.XtraEditors.LabelControl lblPrNo;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.GroupControl gc;
+        private DevExpress.XtraEditors.GroupControl gcDetails;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.LabelControl labelControl23;

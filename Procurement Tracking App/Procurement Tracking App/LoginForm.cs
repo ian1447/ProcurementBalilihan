@@ -138,5 +138,23 @@ namespace Procurement_Tracking_App
                 txtpasswd.Text = string.Empty;
             }
         }
+
+        private void cbShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShow.Checked)
+            {
+                btnchangecon.Enabled = true;
+                btnchangecon.Visible = true;
+                lblstatus.Enabled = true;
+                lblstatus.Visible = true;
+            }
+            else
+            {
+                btnchangecon.Enabled = false;
+                btnchangecon.Visible = false;
+                lblstatus.Enabled = false;
+                lblstatus.Visible = false;
+            }
+        }
     }
 }

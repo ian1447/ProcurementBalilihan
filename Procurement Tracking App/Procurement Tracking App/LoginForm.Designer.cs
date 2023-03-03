@@ -146,7 +146,7 @@
             // btnchangecon
             // 
             this.btnchangecon.Enabled = false;
-            this.btnchangecon.Location = new System.Drawing.Point(504, 409);
+            this.btnchangecon.Location = new System.Drawing.Point(502, 398);
             this.btnchangecon.Name = "btnchangecon";
             this.btnchangecon.Size = new System.Drawing.Size(187, 39);
             this.btnchangecon.TabIndex = 9;
@@ -160,7 +160,7 @@
             this.lblstatus.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstatus.Appearance.ForeColor = System.Drawing.Color.LimeGreen;
             this.lblstatus.Enabled = false;
-            this.lblstatus.Location = new System.Drawing.Point(767, 418);
+            this.lblstatus.Location = new System.Drawing.Point(765, 407);
             this.lblstatus.Name = "lblstatus";
             this.lblstatus.Size = new System.Drawing.Size(122, 18);
             this.lblstatus.TabIndex = 10;
@@ -319,12 +319,12 @@
             // 
             // cbShow
             // 
-            this.cbShow.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.cbShow.Location = new System.Drawing.Point(487, 380);
+            this.cbShow.Location = new System.Drawing.Point(874, 431);
             this.cbShow.Name = "cbShow";
             this.cbShow.Size = new System.Drawing.Size(75, 23);
             this.cbShow.TabIndex = 21;
             this.cbShow.Text = "Show";
+            this.cbShow.CheckedChanged += new System.EventHandler(this.cbShow_CheckedChanged);
             // 
             // LoginForm
             // 

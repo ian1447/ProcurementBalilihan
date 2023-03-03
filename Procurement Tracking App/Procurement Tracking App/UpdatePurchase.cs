@@ -67,6 +67,7 @@ namespace Procurement_Tracking_App
                 dtpDate.Enabled = false;
                 btnSave.Enabled = false;
                 btnSave.Visible = false;
+                gcDetails.Size = new Size(448, 560);
                 this.Size = new Size(475, 730);
             }
         }
