@@ -101,7 +101,7 @@ namespace Procurement_Tracking_App
                 string YearLabel = DateTime.Now.Year.ToString();
                 string MonthLabel = DateTime.Now.Month.ToString();
                 rownumber = PurchaseTable.Rows.Count.ToString();
-                prno = YearLabel + "-" + MonthLabel + " " + rownumber;
+                prno = YearLabel + "-" + MonthLabel + "-000" + rownumber;
                 txtPrNo.Text = prno;
                 if (PublicVariables.UserPrivilege == "Admin")
                     btnadd.Enabled = true;

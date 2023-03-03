@@ -124,3 +124,4 @@ C:\Users\Lenovo\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\P
 C:\Users\Lenovo\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.csproj.GenerateResource.Cache
 C:\Users\Lenovo\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement Tracking App.exe.licenses
 D:\Github\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.YearlyReport.resources
+C:\Users\yanni\Documents\GitHub\ProcurementBalilihan\Procurement Tracking App\Procurement Tracking App\obj\Debug\Procurement_Tracking_App.YearlyReport.resources

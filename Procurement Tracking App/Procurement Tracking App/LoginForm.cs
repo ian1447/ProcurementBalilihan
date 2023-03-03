@@ -138,6 +138,5 @@ namespace Procurement_Tracking_App
                 txtpasswd.Text = string.Empty;
             }
         }
-
     }
 }
