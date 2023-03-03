@@ -87,7 +87,10 @@ namespace Procurement_Tracking_App
                 HideLoading();
                 dtPurchase.DataSource = proctable;
                 if (PublicVariables.UserPrivilege == "User")
+                {
                     btnupdate.Enabled = false;
+                    btnUpdatePurchase.Enabled = false;
+                }
             }
             else
             {

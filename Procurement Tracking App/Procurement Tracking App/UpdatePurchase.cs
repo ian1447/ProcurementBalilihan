@@ -62,8 +62,12 @@ namespace Procurement_Tracking_App
             if (IsViewing)
             {
                 cbStatus.Enabled = false;
+                cbStatus.Visible = false;
+                dtpDate.Visible = false;
                 dtpDate.Enabled = false;
                 btnSave.Enabled = false;
+                btnSave.Visible = false;
+                this.Size = new Size(475, 730);
             }
         }
 

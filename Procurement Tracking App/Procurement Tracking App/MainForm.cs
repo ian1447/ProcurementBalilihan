@@ -22,6 +22,10 @@ namespace Procurement_Tracking_App
             {
                 btnusermanagement.Enabled = false;
                 btnusermanagement.Visibility = BarItemVisibility.Never;
+                btnsupplier.Enabled = false;
+                btnsupplier.Visibility = BarItemVisibility.Never;
+                btnpurchase.Enabled = false;
+                btnpurchase.Visibility = BarItemVisibility.Never;
             }
         }
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
