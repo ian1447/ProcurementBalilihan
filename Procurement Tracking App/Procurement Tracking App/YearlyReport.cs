@@ -13,5 +13,10 @@ namespace Procurement_Tracking_App
             InitializeComponent();
         }
 
+        private void YearlyReport_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+
+        }
+
     }
 }
