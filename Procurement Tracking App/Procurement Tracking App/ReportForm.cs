@@ -71,8 +71,16 @@ namespace Procurement_Tracking_App
         //background worker
         private void bwLoadProcurement_DoWork(object sender, DoWorkEventArgs e)
         {
-            PurchaseTable = Purchase.GetPurchaseReport(dtpFrom.DateTime, dtpTo.DateTime);
-            bwLoadData.CancelAsync();
+            if (PublicVariables.UserPrivilege == "User")
+            {
+                PurchaseTable = Purchase.GetPurchaseReport(dtpFrom.DateTime, dtpTo.DateTime, 1,PublicVariables.UserFullName);
+                bwLoadData.CancelAsync();
+            }
+            else
+            {
+                PurchaseTable = Purchase.GetPurchaseReport(dtpFrom.DateTime, dtpTo.DateTime, 0);
+                bwLoadData.CancelAsync();
+            }
         }
         public int bwLoadDataMaxRetries;
         private void bwLoadProcurement_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

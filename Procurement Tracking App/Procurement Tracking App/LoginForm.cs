@@ -107,6 +107,7 @@ namespace Procurement_Tracking_App
                     foreach (DataRow row in UserTable.Rows)
                     {
                         PublicVariables.UserPrivilege = row[4].ToString();
+                        PublicVariables.UserFullName = row[1].ToString();
                         UserLogout = false;
                         loginsuccess();
                     }

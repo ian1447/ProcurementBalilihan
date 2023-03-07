@@ -75,8 +75,16 @@ namespace Procurement_Tracking_App
 
         private void bwLoadData_DoWork(object sender, DoWorkEventArgs e)
         {
-            proctable = Purchase.GetPurchase();
-            bwLoadData.CancelAsync();
+            if (PublicVariables.UserPrivilege == "User")
+            {
+                proctable = Purchase.GetPurchase(1, PublicVariables.UserFullName);
+                bwLoadData.CancelAsync();
+            }
+            else
+            {
+                proctable = Purchase.GetPurchase(0);
+                bwLoadData.CancelAsync();
+            }
         }
 
         private void bwLoadData_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

@@ -17,5 +17,6 @@ namespace Procurement_Tracking_App.Core
 
         public static int MaxRetries = 3;
         public static string UserPrivilege { get; set; }
+        public static string UserFullName { get; set; }
     }
 }

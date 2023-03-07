@@ -87,7 +87,7 @@ namespace Procurement_Tracking_App
 
         private void bwLoadData_DoWork(object sender, DoWorkEventArgs e)
         {
-            PurchaseTable = Purchase.GetPurchase();
+            PurchaseTable = Purchase.GetPurchase(0);
             bwLoadData.CancelAsync();
         }
 

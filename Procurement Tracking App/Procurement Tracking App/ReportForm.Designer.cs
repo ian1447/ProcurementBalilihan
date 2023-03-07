@@ -84,19 +84,18 @@
             this.dtReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.dtReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             gridLevelNode1.RelationName = "Level1";
             this.dtReport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.dtReport.Location = new System.Drawing.Point(13, 84);
+            this.dtReport.Location = new System.Drawing.Point(9, 57);
             this.dtReport.MainView = this.gvReport;
-            this.dtReport.Margin = new System.Windows.Forms.Padding(4);
             this.dtReport.Name = "dtReport";
             this.dtReport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMemoEdit1,
             this.repositoryItemMarqueeProgressBar1,
             this.repositoryItemMemoEdit2});
-            this.dtReport.Size = new System.Drawing.Size(1527, 704);
+            this.dtReport.Size = new System.Drawing.Size(1018, 482);
             this.dtReport.TabIndex = 2;
             this.dtReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvReport});
@@ -368,10 +367,9 @@
             // 
             this.btnPrintReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintReport.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintReport.Image")));
-            this.btnPrintReport.Location = new System.Drawing.Point(1337, 15);
-            this.btnPrintReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrintReport.Location = new System.Drawing.Point(891, 10);
             this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(203, 61);
+            this.btnPrintReport.Size = new System.Drawing.Size(135, 42);
             this.btnPrintReport.TabIndex = 20;
             this.btnPrintReport.Text = "Print PR Breakdown";
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
@@ -399,20 +397,18 @@
             this.pnlDates.Controls.Add(this.labelControl6);
             this.pnlDates.Controls.Add(this.dtpTo);
             this.pnlDates.Controls.Add(this.dtpFrom);
-            this.pnlDates.Location = new System.Drawing.Point(309, 4);
-            this.pnlDates.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlDates.Location = new System.Drawing.Point(206, 3);
             this.pnlDates.Name = "pnlDates";
-            this.pnlDates.Size = new System.Drawing.Size(627, 82);
+            this.pnlDates.Size = new System.Drawing.Size(418, 56);
             this.pnlDates.TabIndex = 382;
             this.pnlDates.Visible = false;
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(22, 4);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Location = new System.Drawing.Point(15, 3);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(44, 21);
+            this.labelControl8.Size = new System.Drawing.Size(32, 13);
             this.labelControl8.TabIndex = 370;
             this.labelControl8.Text = "From :";
             // 
@@ -421,10 +417,10 @@
             this.btnSearch.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Appearance.Options.UseFont = true;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(490, 32);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSearch.Location = new System.Drawing.Point(327, 22);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(112, 39);
+            this.btnSearch.Size = new System.Drawing.Size(75, 27);
             this.btnSearch.TabIndex = 365;
             this.btnSearch.Text = "Load";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -432,18 +428,17 @@
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(256, 4);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl6.Location = new System.Drawing.Point(171, 3);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(24, 21);
+            this.labelControl6.Size = new System.Drawing.Size(19, 13);
             this.labelControl6.TabIndex = 369;
             this.labelControl6.Text = "To :";
             // 
             // dtpTo
             // 
             this.dtpTo.EditValue = null;
-            this.dtpTo.Location = new System.Drawing.Point(256, 34);
-            this.dtpTo.Margin = new System.Windows.Forms.Padding(6);
+            this.dtpTo.Location = new System.Drawing.Point(171, 23);
+            this.dtpTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dtpTo.Properties.Appearance.Options.UseFont = true;
@@ -457,14 +452,14 @@
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTo.Properties.Mask.EditMask = "MMM. dd, yyyy";
             this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dtpTo.Size = new System.Drawing.Size(222, 34);
+            this.dtpTo.Size = new System.Drawing.Size(148, 24);
             this.dtpTo.TabIndex = 364;
             // 
             // dtpFrom
             // 
             this.dtpFrom.EditValue = null;
-            this.dtpFrom.Location = new System.Drawing.Point(22, 34);
-            this.dtpFrom.Margin = new System.Windows.Forms.Padding(6);
+            this.dtpFrom.Location = new System.Drawing.Point(15, 23);
+            this.dtpFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dtpFrom.Properties.Appearance.Options.UseFont = true;
@@ -478,14 +473,14 @@
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.Mask.EditMask = "MMM. dd, yyyy";
             this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dtpFrom.Size = new System.Drawing.Size(222, 34);
+            this.dtpFrom.Size = new System.Drawing.Size(148, 24);
             this.dtpFrom.TabIndex = 362;
             // 
             // cmbDateSpan
             // 
             this.cmbDateSpan.EditValue = "-- Select Period --";
-            this.cmbDateSpan.Location = new System.Drawing.Point(15, 42);
-            this.cmbDateSpan.Margin = new System.Windows.Forms.Padding(6);
+            this.cmbDateSpan.Location = new System.Drawing.Point(10, 29);
+            this.cmbDateSpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDateSpan.Name = "cmbDateSpan";
             this.cmbDateSpan.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.cmbDateSpan.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -495,7 +490,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbDateSpan.Properties.NullText = "-- Select Period --";
             this.cmbDateSpan.Properties.View = this.gridView1;
-            this.cmbDateSpan.Size = new System.Drawing.Size(284, 34);
+            this.cmbDateSpan.Size = new System.Drawing.Size(189, 24);
             this.cmbDateSpan.TabIndex = 381;
             this.cmbDateSpan.EditValueChanged += new System.EventHandler(this.cmbDateSpan_EditValueChanged);
             // 
@@ -510,25 +505,24 @@
             // 
             this.btnproreport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnproreport.Image = ((System.Drawing.Image)(resources.GetObject("btnproreport.Image")));
-            this.btnproreport.Location = new System.Drawing.Point(1126, 15);
-            this.btnproreport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnproreport.Location = new System.Drawing.Point(751, 10);
             this.btnproreport.Name = "btnproreport";
-            this.btnproreport.Size = new System.Drawing.Size(203, 61);
+            this.btnproreport.Size = new System.Drawing.Size(135, 42);
             this.btnproreport.TabIndex = 383;
             this.btnproreport.Text = "Print PR Report";
             this.btnproreport.Click += new System.EventHandler(this.btnproreport_Click);
             // 
             // ReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1557, 801);
+            this.ClientSize = new System.Drawing.Size(1038, 548);
             this.Controls.Add(this.btnproreport);
             this.Controls.Add(this.pnlDates);
             this.Controls.Add(this.cmbDateSpan);
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.dtReport);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReportForm";
             this.Text = "Report Form";
             this.Load += new System.EventHandler(this.ReportForm_Load);

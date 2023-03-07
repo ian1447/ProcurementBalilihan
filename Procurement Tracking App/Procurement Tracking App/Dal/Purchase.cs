@@ -18,7 +18,7 @@ namespace Procurement_Tracking_App.Dal
         //get
         public static bool GetPurchaseIsGood = false;
         public static string GetPurchaseErrorMessage;
-        public static DataTable GetPurchase()
+        public static DataTable GetPurchase(int _choice, string _end_user = null)
         {
             DataSet dt = new DataSet();
             using (MySqlConnection con = new MySqlConnection(ConnectionString()))
@@ -28,6 +28,8 @@ namespace Procurement_Tracking_App.Dal
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand("sp_purchase_get", con);
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new MySqlParameter("_choice", _choice));
+                    cmd.Parameters.Add(new MySqlParameter("_end_user", _end_user));
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
                     adp.Fill(dt);
                     con.Close();
@@ -39,7 +41,7 @@ namespace Procurement_Tracking_App.Dal
         }
         public static bool GetPurchasReporteIsGood = false;
         public static string GetPurchaseReportErrorMessage;
-        public static DataTable GetPurchaseReport(DateTime _date_from, DateTime _date_to)
+        public static DataTable GetPurchaseReport(DateTime _date_from, DateTime _date_to, int _choice, string _end_user = null)
         {
             DataTable dt = new DataTable();
             using (MySqlConnection con = new MySqlConnection(ConnectionString()))
@@ -51,6 +53,8 @@ namespace Procurement_Tracking_App.Dal
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new MySqlParameter("_date_from", _date_from));
                     cmd.Parameters.Add(new MySqlParameter("_date_to", _date_to));
+                    cmd.Parameters.Add(new MySqlParameter("_choice", _choice));
+                    cmd.Parameters.Add(new MySqlParameter("_end_user", _end_user));
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
                     adp.Fill(dt);
                     con.Close();
