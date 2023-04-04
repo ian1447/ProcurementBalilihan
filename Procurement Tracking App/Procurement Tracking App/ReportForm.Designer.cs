@@ -64,6 +64,9 @@
             this.cmbDateSpan = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnproreport = new DevExpress.XtraEditors.SimpleButton();
+            this.cmbEnduser = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.bwLoadEndUser = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dtReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
@@ -77,6 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDateSpan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbEnduser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtReport
@@ -84,18 +89,19 @@
             this.dtReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             gridLevelNode1.RelationName = "Level1";
             this.dtReport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.dtReport.Location = new System.Drawing.Point(9, 57);
+            this.dtReport.Location = new System.Drawing.Point(14, 83);
             this.dtReport.MainView = this.gvReport;
+            this.dtReport.Margin = new System.Windows.Forms.Padding(4);
             this.dtReport.Name = "dtReport";
             this.dtReport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMemoEdit1,
             this.repositoryItemMarqueeProgressBar1,
             this.repositoryItemMemoEdit2});
-            this.dtReport.Size = new System.Drawing.Size(1018, 482);
+            this.dtReport.Size = new System.Drawing.Size(1527, 704);
             this.dtReport.TabIndex = 2;
             this.dtReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvReport});
@@ -237,7 +243,7 @@
             this.opening_of_bids.FieldName = "opening_of_bids";
             this.opening_of_bids.Name = "opening_of_bids";
             this.opening_of_bids.Visible = true;
-            this.opening_of_bids.VisibleIndex = 5;
+            this.opening_of_bids.VisibleIndex = 6;
             // 
             // preproc
             // 
@@ -251,7 +257,7 @@
             this.preproc.FieldName = "preproc";
             this.preproc.Name = "preproc";
             this.preproc.Visible = true;
-            this.preproc.VisibleIndex = 6;
+            this.preproc.VisibleIndex = 7;
             // 
             // posting
             // 
@@ -265,7 +271,7 @@
             this.posting.FieldName = "posting";
             this.posting.Name = "posting";
             this.posting.Visible = true;
-            this.posting.VisibleIndex = 7;
+            this.posting.VisibleIndex = 8;
             // 
             // predib
             // 
@@ -279,7 +285,7 @@
             this.predib.FieldName = "prebid";
             this.predib.Name = "predib";
             this.predib.Visible = true;
-            this.predib.VisibleIndex = 8;
+            this.predib.VisibleIndex = 9;
             // 
             // detailed_bid_evaluation
             // 
@@ -293,7 +299,7 @@
             this.detailed_bid_evaluation.FieldName = "detailed_bid_evaluation";
             this.detailed_bid_evaluation.Name = "detailed_bid_evaluation";
             this.detailed_bid_evaluation.Visible = true;
-            this.detailed_bid_evaluation.VisibleIndex = 9;
+            this.detailed_bid_evaluation.VisibleIndex = 10;
             // 
             // award
             // 
@@ -307,7 +313,7 @@
             this.award.FieldName = "award";
             this.award.Name = "award";
             this.award.Visible = true;
-            this.award.VisibleIndex = 10;
+            this.award.VisibleIndex = 11;
             // 
             // po
             // 
@@ -321,7 +327,7 @@
             this.po.FieldName = "po";
             this.po.Name = "po";
             this.po.Visible = true;
-            this.po.VisibleIndex = 11;
+            this.po.VisibleIndex = 12;
             // 
             // ntp
             // 
@@ -335,7 +341,7 @@
             this.ntp.FieldName = "ntp";
             this.ntp.Name = "ntp";
             this.ntp.Visible = true;
-            this.ntp.VisibleIndex = 12;
+            this.ntp.VisibleIndex = 13;
             // 
             // delivery
             // 
@@ -349,7 +355,7 @@
             this.delivery.FieldName = "delivery";
             this.delivery.Name = "delivery";
             this.delivery.Visible = true;
-            this.delivery.VisibleIndex = 13;
+            this.delivery.VisibleIndex = 14;
             // 
             // transdate
             // 
@@ -357,7 +363,7 @@
             this.transdate.FieldName = "transdate";
             this.transdate.Name = "transdate";
             this.transdate.Visible = true;
-            this.transdate.VisibleIndex = 14;
+            this.transdate.VisibleIndex = 5;
             // 
             // repositoryItemMarqueeProgressBar1
             // 
@@ -367,9 +373,10 @@
             // 
             this.btnPrintReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintReport.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintReport.Image")));
-            this.btnPrintReport.Location = new System.Drawing.Point(891, 10);
+            this.btnPrintReport.Location = new System.Drawing.Point(1336, 15);
+            this.btnPrintReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(135, 42);
+            this.btnPrintReport.Size = new System.Drawing.Size(202, 61);
             this.btnPrintReport.TabIndex = 20;
             this.btnPrintReport.Text = "Print PR Breakdown";
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
@@ -397,18 +404,20 @@
             this.pnlDates.Controls.Add(this.labelControl6);
             this.pnlDates.Controls.Add(this.dtpTo);
             this.pnlDates.Controls.Add(this.dtpFrom);
-            this.pnlDates.Location = new System.Drawing.Point(206, 3);
+            this.pnlDates.Location = new System.Drawing.Point(311, 45);
+            this.pnlDates.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDates.Name = "pnlDates";
-            this.pnlDates.Size = new System.Drawing.Size(418, 56);
+            this.pnlDates.Size = new System.Drawing.Size(627, 82);
             this.pnlDates.TabIndex = 382;
             this.pnlDates.Visible = false;
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(15, 3);
+            this.labelControl8.Location = new System.Drawing.Point(22, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(32, 13);
+            this.labelControl8.Size = new System.Drawing.Size(44, 21);
             this.labelControl8.TabIndex = 370;
             this.labelControl8.Text = "From :";
             // 
@@ -417,10 +426,10 @@
             this.btnSearch.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Appearance.Options.UseFont = true;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(327, 22);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Location = new System.Drawing.Point(490, 32);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(6);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 27);
+            this.btnSearch.Size = new System.Drawing.Size(112, 39);
             this.btnSearch.TabIndex = 365;
             this.btnSearch.Text = "Load";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -428,17 +437,18 @@
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(171, 3);
+            this.labelControl6.Location = new System.Drawing.Point(256, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(19, 13);
+            this.labelControl6.Size = new System.Drawing.Size(24, 21);
             this.labelControl6.TabIndex = 369;
             this.labelControl6.Text = "To :";
             // 
             // dtpTo
             // 
             this.dtpTo.EditValue = null;
-            this.dtpTo.Location = new System.Drawing.Point(171, 23);
-            this.dtpTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpTo.Location = new System.Drawing.Point(256, 34);
+            this.dtpTo.Margin = new System.Windows.Forms.Padding(6);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dtpTo.Properties.Appearance.Options.UseFont = true;
@@ -452,14 +462,14 @@
             this.dtpTo.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpTo.Properties.Mask.EditMask = "MMM. dd, yyyy";
             this.dtpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dtpTo.Size = new System.Drawing.Size(148, 24);
+            this.dtpTo.Size = new System.Drawing.Size(222, 34);
             this.dtpTo.TabIndex = 364;
             // 
             // dtpFrom
             // 
             this.dtpFrom.EditValue = null;
-            this.dtpFrom.Location = new System.Drawing.Point(15, 23);
-            this.dtpFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFrom.Location = new System.Drawing.Point(22, 34);
+            this.dtpFrom.Margin = new System.Windows.Forms.Padding(6);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dtpFrom.Properties.Appearance.Options.UseFont = true;
@@ -473,14 +483,14 @@
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.Mask.EditMask = "MMM. dd, yyyy";
             this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dtpFrom.Size = new System.Drawing.Size(148, 24);
+            this.dtpFrom.Size = new System.Drawing.Size(222, 34);
             this.dtpFrom.TabIndex = 362;
             // 
             // cmbDateSpan
             // 
             this.cmbDateSpan.EditValue = "-- Select Period --";
-            this.cmbDateSpan.Location = new System.Drawing.Point(10, 29);
-            this.cmbDateSpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbDateSpan.Location = new System.Drawing.Point(15, 42);
+            this.cmbDateSpan.Margin = new System.Windows.Forms.Padding(6);
             this.cmbDateSpan.Name = "cmbDateSpan";
             this.cmbDateSpan.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.cmbDateSpan.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -490,7 +500,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbDateSpan.Properties.NullText = "-- Select Period --";
             this.cmbDateSpan.Properties.View = this.gridView1;
-            this.cmbDateSpan.Size = new System.Drawing.Size(189, 24);
+            this.cmbDateSpan.Size = new System.Drawing.Size(284, 34);
             this.cmbDateSpan.TabIndex = 381;
             this.cmbDateSpan.EditValueChanged += new System.EventHandler(this.cmbDateSpan_EditValueChanged);
             // 
@@ -505,24 +515,57 @@
             // 
             this.btnproreport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnproreport.Image = ((System.Drawing.Image)(resources.GetObject("btnproreport.Image")));
-            this.btnproreport.Location = new System.Drawing.Point(751, 10);
+            this.btnproreport.Location = new System.Drawing.Point(1126, 15);
+            this.btnproreport.Margin = new System.Windows.Forms.Padding(4);
             this.btnproreport.Name = "btnproreport";
-            this.btnproreport.Size = new System.Drawing.Size(135, 42);
+            this.btnproreport.Size = new System.Drawing.Size(202, 61);
             this.btnproreport.TabIndex = 383;
             this.btnproreport.Text = "Print PR Report";
             this.btnproreport.Click += new System.EventHandler(this.btnproreport_Click);
             // 
+            // cmbEnduser
+            // 
+            this.cmbEnduser.EditValue = "-- Select End User --";
+            this.cmbEnduser.Location = new System.Drawing.Point(311, 42);
+            this.cmbEnduser.Margin = new System.Windows.Forms.Padding(6);
+            this.cmbEnduser.Name = "cmbEnduser";
+            this.cmbEnduser.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
+            this.cmbEnduser.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cmbEnduser.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbEnduser.Properties.Appearance.Options.UseFont = true;
+            this.cmbEnduser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbEnduser.Properties.NullText = "-- Select End user --";
+            this.cmbEnduser.Properties.View = this.gridView2;
+            this.cmbEnduser.Size = new System.Drawing.Size(284, 34);
+            this.cmbEnduser.TabIndex = 384;
+            this.cmbEnduser.EditValueChanged += new System.EventHandler(this.cmbEnduser_EditValueChanged);
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // bwLoadEndUser
+            // 
+            this.bwLoadEndUser.WorkerSupportsCancellation = true;
+            this.bwLoadEndUser.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwLoadEndUser_DoWork);
+            this.bwLoadEndUser.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwLoadEndUser_RunWorkerCompleted);
+            // 
             // ReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 548);
+            this.ClientSize = new System.Drawing.Size(1557, 801);
+            this.Controls.Add(this.cmbEnduser);
             this.Controls.Add(this.btnproreport);
             this.Controls.Add(this.pnlDates);
             this.Controls.Add(this.cmbDateSpan);
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.dtReport);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ReportForm";
             this.Text = "Report Form";
             this.Load += new System.EventHandler(this.ReportForm_Load);
@@ -541,6 +584,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDateSpan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbEnduser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,5 +627,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn transdate;
         private DevExpress.XtraEditors.SimpleButton btnproreport;
+        private DevExpress.XtraEditors.SearchLookUpEdit cmbEnduser;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.ComponentModel.BackgroundWorker bwLoadEndUser;
     }
 }

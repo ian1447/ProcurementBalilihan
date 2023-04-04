@@ -139,6 +139,7 @@ namespace Procurement_Tracking_App
             cmbDateSpan.Properties.DisplayMember = "Period";
             cmbDateSpan.Properties.ValueMember = "Period";
             cmbDateSpan.EditValue = "This Month's Record";
+            GetEndUsers();
             LoadData();
     
         }
@@ -275,10 +276,77 @@ namespace Procurement_Tracking_App
             {
                 yr.lblTitleYear.Text = "PROCUREMENT STATUS " + dateFrom.Year.ToString() + " - " + dateTo.Year.ToString();
             }
+            if (End_User == "ALL END USERS" || cmbEnduser.Text == cmbEnduser.Properties.NullText)
+            {
+                yr.DataSource = PurchaseTable;
+                yr.DataMember = "CustomSQLQuery1";
+                yr.ShowPreviewDialog();
+            }
+            else
+            {
+                yr.DataSource = FilteredTable;
+                yr.DataMember = "CustomSQLQuery1";
+                yr.ShowPreviewDialog();
+            }
+        }
+        string End_User;
+        DataTable FilteredTable = new DataTable();
+        private void cmbEnduser_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                End_User = cmbEnduser.EditValue.ToString();
+                if (End_User != "ALL END USERS")
+                {
+                    End_User = cmbEnduser.EditValue.ToString().ToLower();
+                    DataView barDataView = new DataView(PurchaseTable);
+                    barDataView.RowFilter = "[end_user] LIKE '%" + End_User + "%'";
+                    DataTable barFiltered = barDataView.ToTable();
+                    dtReport.DataSource = barFiltered;
+                    FilteredTable = barFiltered;
+                }
+                else
+                {
+                    LoadData();
+                }
+            }
+            catch
+            {
+                cmbEnduser.EditValue = -1;
+            }
             
-            yr.DataSource = PurchaseTable;
-            yr.DataMember = "CustomSQLQuery1";
-            yr.ShowPreviewDialog();
+   
+
+        }
+        DataTable dtusers = new DataTable();
+        private void bwLoadEndUser_DoWork(object sender, DoWorkEventArgs e)
+        {
+            dtusers = Purchase.GetEndUsers();
+            bwLoadEndUser.CancelAsync();
+        }
+
+        private void bwLoadEndUser_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            HideLoading();
+            if (Purchase.GetEndUserIsGood)
+            {
+                dtusers.Rows.Add("ALL END USERS");
+                cmbEnduser.Properties.DataSource = dtusers;
+                cmbEnduser.Properties.DisplayMember = "end_user";
+                cmbEnduser.Properties.ValueMember = "end_user";
+               
+            }
+            else
+            {
+                MessageBox.Show(Purchase.GetEndUserErrorMessage, "Error!");
+            }
+        }
+        private void GetEndUsers() {
+            if (!bwLoadEndUser.IsBusy)
+            {
+                ShowLoading("Loading...");
+                bwLoadEndUser.RunWorkerAsync();
+            }
         }
     }
 }

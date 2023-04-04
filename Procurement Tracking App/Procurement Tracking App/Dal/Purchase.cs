@@ -87,6 +87,27 @@ namespace Procurement_Tracking_App.Dal
                 catch (Exception ex) { GetPurchaseBreakdownIsGood = false; GetPurchaseBreakdownErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Get"; return null; }
             }
         }
+        public static bool GetEndUserIsGood = false;
+        public static string GetEndUserErrorMessage;
+        public static DataTable GetEndUsers()
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection con = new MySqlConnection(ConnectionString()))
+            {
+                try
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("sp_purchase_end_user_get", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
+                    adp.Fill(dt);
+                    con.Close();
+                    GetEndUserIsGood = true;
+                    return dt;
+                }
+                catch (Exception ex) { GetEndUserIsGood = false; GetEndUserErrorMessage = "ERROR!\n" + ex.Message + "\nFunction : Get End User"; return null; }
+            }
+        }
 
         public static bool GetPrIsGood = false;
         public static string GetPrErrorMessage;
