@@ -102,18 +102,14 @@ namespace Procurement_Tracking_App
             if (Login.GetUserDataSuccessful)
             {
                 HideLoading();
-                if (UserTable != null)
+                MessageBox.Show(Login.GetUserDataError);
+                foreach (DataRow row in UserTable.Rows)
                 {
-                    foreach (DataRow row in UserTable.Rows)
-                    {
-                        PublicVariables.UserPrivilege = row[4].ToString();
-                        PublicVariables.UserFullName = row[1].ToString();
-                        UserLogout = false;
-                        loginsuccess();
-                    }
+                    PublicVariables.UserPrivilege = row[4].ToString();
+                    PublicVariables.UserFullName = row[1].ToString();
+                    UserLogout = false;
+                    loginsuccess();
                 }
-                else
-                    MessageBox.Show("Invalid Username or Password");
             }
             else
             {
@@ -156,6 +152,16 @@ namespace Procurement_Tracking_App
                 lblstatus.Enabled = false;
                 lblstatus.Visible = false;
             }
+        }
+
+        private void txtpasswd_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusername_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

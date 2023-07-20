@@ -43,18 +43,26 @@ namespace Procurement_Tracking_App.Dal
                 using (MySqlConnection con = new MySqlConnection(ConnectionString()))
                 {
                     con.Open();
-                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM `users` WHERE `username` = '" + Username + "' && `password` = PASSWORD('" + Password + "');", con);
+                    MySqlCommand cmd = new MySqlCommand("sp_users_login", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new MySqlParameter("_username", Username));
+                    cmd.Parameters.Add(new MySqlParameter("_password", Password));
+                    cmd.Parameters.Add(new MySqlParameter("_id", 0));
                     MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
                     adp.Fill(dt);
                     con.Close();
                     GetUserDataSuccessful = true;
-                    if (dt.Tables[0].Rows.Count > 0)
+
+                    if (dt.Tables[0].Rows[0]["_ret"].ToString().Equals("Login Sucessfully"))
                     {
+                        GetUserDataError = dt.Tables[0].Rows[0]["_ret"].ToString();
                         PublicVariables.UserPrivilege = dt.Tables[0].Rows[0]["privilege"].ToString();
                         return dt.Tables[0];
                     }
                     else
                     {
+                        GetUserDataError = dt.Tables[0].Rows[0]["_ret"].ToString();
+                        GetUserDataSuccessful = false;
                         return null;
                     }
                 }
